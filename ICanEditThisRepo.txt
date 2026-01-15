@@ -4,7 +4,7 @@ Replace your initials in this file with the word "HERE" to demonstrate that you 
  1. JA
  2. KB
  3. HERE
- 4. JC
+ 4. HERE
  5. MD
  6. SF
  7. DG
