@@ -6,12 +6,12 @@
     <artifactId>LeapYearsKatas</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pair1</groupId>
+  <groupId>edu.pdx.cs.joy.pair2</groupId>
   <artifactId>LeapYears</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Pair 1's Leap Year Kata</name>
+  <name>Pair 2's Leap Year Kata</name>
   <description>Leap Years Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
@@ -37,7 +37,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.LeapYears</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair2.LeapYears</mainClass>
             </manifest>
           </archive>
         </configuration>
