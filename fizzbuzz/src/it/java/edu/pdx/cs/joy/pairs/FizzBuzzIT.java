@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pairs;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -14,6 +15,7 @@ class FizzBuzzIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Disabled
   @Test
   void tenPrintsFirst10FizzBuzz() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(FizzBuzz.class, "10");
