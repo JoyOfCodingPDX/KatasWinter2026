@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>edu.pdx.cs.joy.katas</groupId>
-    <artifactId>KatasWinter</artifactId>
+    <artifactId>KatasWinter2026</artifactId>
     <version>1.0.0</version>
   </parent>
   <artifactId>LeapYearsKatas</artifactId>
