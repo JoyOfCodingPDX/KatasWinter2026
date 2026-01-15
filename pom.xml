@@ -20,6 +20,7 @@ accordingly
   <url>http://joyofcodingpdx.github.io/KatasWinter2026</url>
   <modules>
     <module>fizzbuzz</module>
+    <module>LeapYears</module>
   </modules>
   <inceptionYear>2026</inceptionYear>
   <organization>
