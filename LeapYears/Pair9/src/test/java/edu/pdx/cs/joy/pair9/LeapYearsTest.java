@@ -17,7 +17,7 @@ public class LeapYearsTest
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"400", "2000", "2008", "2012", "2016"})
+  @ValueSource(strings = {"400", "1000", "2000", "2008", "2012", "2016"})
   void isALeapYear(String year) {
     LeapYears newLeapYear = new LeapYears();
     boolean result = newLeapYear.isLeapYear(year);
