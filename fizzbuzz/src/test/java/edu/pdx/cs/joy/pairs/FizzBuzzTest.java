@@ -35,6 +35,16 @@ public class FizzBuzzTest
     assertFizzBuzz(3, "Fizz");
   }
 
+  @Test
+  void fizzBuzzOf5IsBuzz() {
+    assertFizzBuzz(5, "Buzz");
+  }
+
+  @Test
+  void fizzBuzzOf15IsFizzBuzz() {
+    assertFizzBuzz(15, "FizzBuzz");
+  }
+
 
 
 }
