@@ -13,7 +13,7 @@ public class LeapYearsTest
     new LeapYears();
   }
 
-  void is100aleapyear() {
+  void is100aLeapYear() {
     int year = 100;
     boolean expected = false;
     assertThat(year, equalTo(expected));
