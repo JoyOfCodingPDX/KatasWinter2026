@@ -15,7 +15,7 @@ public class LeapYearsTest
 
 
 
-  private static void assertLeapYear(int number, bool leapYearResult){
+  private static void assertLeapYear(int number, boolean leapYearResult){
     boolean one = LeapYears.leapYear(number);
     assertThat(one, equalTo(leapYearResult));
   }
@@ -25,6 +25,10 @@ public class LeapYearsTest
     assertLeapYear(4, true);
   }
 
+  @Test
+  void Testmodhundred(){
+    assertLeapYear(100, false);
+  }
 }
 
 

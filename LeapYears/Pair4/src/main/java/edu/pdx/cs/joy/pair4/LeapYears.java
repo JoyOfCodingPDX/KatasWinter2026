@@ -9,6 +9,8 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
+  // Return value of 1 == true
+  // Any other value == false
   public static int isLeapYear(int year) {
     if (year % 400 == 0) {
       return 1;
