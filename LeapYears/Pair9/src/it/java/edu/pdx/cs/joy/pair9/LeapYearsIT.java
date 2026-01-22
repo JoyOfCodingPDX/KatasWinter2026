@@ -30,7 +30,7 @@ class LeapYearsIT extends InvokeMainTestCase {
   void invokingMainWithInvalidLeapYearPrintsIsNotALeapYear(String year) {
     InvokeMainTestCase.MainMethodResult result = invokeMain(LeapYears.class, year);
     assertThat(result.getTextWrittenToStandardError(), equalTo(""));
-    assertThat(result.getTextWrittenToStandardOut(), containsString(year + " is a leap year"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString(year + " is NOT a leap year"));
   }
 }
 
