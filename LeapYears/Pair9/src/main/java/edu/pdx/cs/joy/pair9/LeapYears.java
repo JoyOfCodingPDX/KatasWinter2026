@@ -13,6 +13,7 @@ public class LeapYears {
 
   @VisibleForTesting
   public boolean isLeapYear(String year) {
+    Integer intYear = Integer.parseInt(year);
 
     return false;
   }
