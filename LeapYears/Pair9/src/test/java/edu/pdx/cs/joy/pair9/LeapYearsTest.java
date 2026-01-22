@@ -16,6 +16,7 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  //The AI summary lied to us -_- 1000 is not a leap year -SH
   @ParameterizedTest
   @ValueSource(strings = {"400", "1000", "2000", "2008", "2012", "2016"})
   void isALeapYear(String year) {
