@@ -40,6 +40,11 @@ public class FizzBuzzTest
     assertFizzBuzz(5, "Buzz");
   }
 
+  @Test
+  void fizzBuzzOf15IsFizzBuzz() {
+    assertFizzBuzz(15, "FizzBuzz");
+  }
+
 
 
 }
