@@ -12,7 +12,7 @@ public class LeapYearsTest {
   @Test
   void isdivisibleby400()
   {
-    assertThat(400, isLeapYear())
+    assertThat(400, isLeapYear(400) )
   }
 }
 
