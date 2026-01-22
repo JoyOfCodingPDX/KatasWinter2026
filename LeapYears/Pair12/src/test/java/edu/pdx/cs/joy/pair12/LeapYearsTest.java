@@ -1,10 +1,11 @@
-package edu.pdx.cs.joy.pair1;
+package edu.pdx.cs.joy.pair12;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class LeapYearsTest
 {
-
   @Test
   void canInstantiateKataClass() {
     new LeapYears();
@@ -12,6 +13,6 @@ public class LeapYearsTest
 
   @Test
   void isThisYearTheLeapYear(){
-    assert(LeapYear.isLeapYear(2026));
+    assertEquals(false, LeapYears.isLeapYear(2026));
   }
 }
