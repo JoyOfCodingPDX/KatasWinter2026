@@ -10,6 +10,11 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void yearDivisible400IsLeap(){
+    assert(isLeapYear(400) == True);
+  }
+
 }
 
 
