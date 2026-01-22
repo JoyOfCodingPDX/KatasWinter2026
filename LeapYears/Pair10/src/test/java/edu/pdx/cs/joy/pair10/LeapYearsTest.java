@@ -30,4 +30,9 @@ public class LeapYearsTest
     assert(LeapYears.isLeapYear(2012) == true);
   }
 
+  @Test
+  void is1800LeapIsFase() {
+    assert(LeapYears.isLeapYear(1800) == false);
+  }
+
 }
