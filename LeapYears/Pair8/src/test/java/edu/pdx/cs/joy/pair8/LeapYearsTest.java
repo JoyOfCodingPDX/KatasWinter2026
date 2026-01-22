@@ -10,6 +10,14 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+
+
+  @Test
+  void isModOfFour() {
+    int num = 4;
+    assertLeapYear(num, true);
+  }
+
 }
 
 
