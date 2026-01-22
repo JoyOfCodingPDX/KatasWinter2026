@@ -19,10 +19,14 @@ public class LeapYearsTest
 //  }
 
   @Test
-  void divisibleBy400IsLeapYear() {
-    assertEquals(LeapYears.leapYears(400), "Leap Year");
+  void year2000IsLeapYear() {
+    assertEquals(LeapYears.leapYears(2000), "Leap Year");
   }
 
+  @Test
+  void year2004isLeapYear(){
+    assertEquals(LeapYears.leapYears(2004), "Leap Year");
+  }
 }
 
 
