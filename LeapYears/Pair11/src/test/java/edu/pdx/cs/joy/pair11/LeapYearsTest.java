@@ -14,11 +14,15 @@ public class LeapYearsTest
   }
 
 
-  @Test
-  private static void assertLeapYear(int number, String leapYearResult){
-    String one = LeapYears.leapYear(number);
-    assertThat(one, equalTo(leapYearResult));
 
+  private static void assertLeapYear(int number, bool leapYearResult){
+    boolean one = LeapYears.leapYear(number);
+    assertThat(one, equalTo(leapYearResult));
+  }
+
+  @Test
+  void TestFour(){
+    assertLeapYear(4, true);
   }
 
 }
