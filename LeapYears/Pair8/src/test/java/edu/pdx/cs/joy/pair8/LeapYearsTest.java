@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair8;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class LeapYearsTest
 {
 
@@ -10,12 +13,14 @@ public class LeapYearsTest
     new LeapYears();
   }
 
-
+//  @Test
+//  void yearReturned() {
+//    assertEquals(LeapYears.leapYears(2000), 2000);
+//  }
 
   @Test
-  void isModOfFour() {
-    int num = 4;
-    assertLeapYear(num, true);
+  void divisibleBy400IsLeapYear() {
+    assertEquals(LeapYears.leapYears(400), "Leap Year");
   }
 
 }
