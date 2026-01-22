@@ -10,9 +10,17 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
   void is100aleapyear() {
     int year = 100;
-    boolean expected = false;
+    int expected = 0;
+    assertThat(LeapYears.isLeapYear(year), equalTo(expected));  // Is that right?
+  }
+
+  @Test
+  void is400aleapyear() {
+    int year = 400;
+    int expected = 1;
     assertThat(year, equalTo(expected));
   }
 

@@ -18,23 +18,36 @@ public class LeapYearsTest
     assertFalse(obj.isLeapYear(5));
   }
 
+  void isNotLeapYearNegative(){
+    assertTrue(obj.isLeapYear(-1));
+  }
+
+  void isLeapYearNegative400(){
+    assertTrue(obj.isLeapYear(-400));
+  }
+
   @Test
-  void isItALeapYear() {
-    assertEquals(obj.isLeapYear(30), false);
+  void is30NotaLeapYear() {
+    assertFalse(obj.isLeapYear(30));
   }
 
   @Test
   void isLeapYear() {
-    assertEquals(obj.isLeapYear(400), true);
+    assertTrue(obj.isLeapYear(400));
   }
 
   @Test
-  void isNotLeapYear() {
+  void is100NotLeapYear() {
     assertFalse(obj.isLeapYear(100));
   }
 
   @Test
-  void isLeapYearMultiple4() {
+  void is200NotLeapYear2() {
+    assertFalse(obj.isLeapYear(200));
+  }
+
+  @Test
+  void is404LeapYearMultiple4() {
     assertTrue(obj.isLeapYear(404));
   }
 

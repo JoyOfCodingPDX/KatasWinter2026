@@ -14,7 +14,15 @@ public class LeapYears {
   @VisibleForTesting
   public boolean isLeapYear(String year) {
     Integer intYear = Integer.parseInt(year);
-
+    if (intYear % 400 == 0) {
+      return true;
+    }
+    else if ( (intYear % 100 == 0) && (intYear % 400 != 0) ) {
+      return false;
+    }
+    else if ( (intYear % 4 == 0) && (intYear % 100 != 0) ) {
+      return true;
+    }
     return false;
   }
 }
