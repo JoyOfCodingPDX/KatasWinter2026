@@ -10,18 +10,28 @@ public class LeapYearsTest
 
   @Test
   void canInstantiateKataClass() {
-    new LeapYears(5);
+    new LeapYears();
   }
 
   @Test
   void isItAYear() {
-    LeapYears objectLeapYears = new LeapYears(5);
-    assertEquals(objectLeapYears.yearsToCalculate.getClass(), Integer.class);
+    LeapYears objectLeapYears = new LeapYears();
+    assertEquals(objectLeapYears.isLeapYear(5), false);
   }
 
   @Test
   void isItALeapYear() {
-    LeapYears objectLeapYears = new LeapYears(30);
-    assertEquals(objectLeapYears.isLeapYear(objectLeapYears), false);
+    LeapYears objectLeapYears = new LeapYears();
+    assertEquals(objectLeapYears.isLeapYear(30), false);
+  }
+
+  @Test
+  void isLeapYear() {
+    LeapYears obj = new LeapYears();
+    assertEquals(obj.isLeapYear(400), true);
+  }
+
+  @Test
+  void isNotLeapYear(){
   }
 }
