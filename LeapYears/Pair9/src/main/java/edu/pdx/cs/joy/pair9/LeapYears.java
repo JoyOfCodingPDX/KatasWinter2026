@@ -10,4 +10,10 @@ public class LeapYears {
       System.err.println("Missing command line arguments");
     }
   }
+
+  @VisibleForTesting
+  public boolean isLeapYear(String year) {
+
+    return false;
+  }
 }
