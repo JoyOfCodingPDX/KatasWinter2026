@@ -10,6 +10,24 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void yearDivisible400IsLeap(){
+    assert(LeapYears.isLeapYear(400));
+  }
+
+  @Test
+  void yearDivisible100NotLeap() {
+    assert(LeapYears.isLeapYear(100) == false);
+  }
+
+  @Test
+  void is2008LeapIsTrue() {
+    assert(LeapYears.isLeapYear(2008) == true);
+  }
+
+  @Test
+  void is2012LeapIsTrue() {
+    assert(LeapYears.isLeapYear(2012) == true);
+  }
+
 }
-
-

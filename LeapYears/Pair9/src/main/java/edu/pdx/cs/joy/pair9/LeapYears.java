@@ -6,6 +6,14 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+    }
+  }
+
+  @VisibleForTesting
+  public boolean isLeapYear(String year) {
+
+    return false;
   }
 }
