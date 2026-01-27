@@ -9,9 +9,22 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
+<<<<<<< HEAD
   public static int isLeapYear(int year) {
     return 0;
   }
 
   }
+=======
+  // Return value of 1 == true
+  // Any other value == false
+  public static int isLeapYear(int year) {
+    if (year % 400 == 0) {
+      return 1;
+    } else if (year % 100 != 0 && year % 4 == 0) {
+      return 1;
+    }
+    return 0;
+  }
+>>>>>>> 24ee2af0b8d3099b1eb9d737bd0ebc9fe307fc3a
 }

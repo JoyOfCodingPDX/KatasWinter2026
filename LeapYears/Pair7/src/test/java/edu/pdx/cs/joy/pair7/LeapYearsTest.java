@@ -10,9 +10,12 @@ public class LeapYearsTest {
   }
 
   @Test
-  void isdivisibleby400()
+  void isQualifyAsLeapYear()
   {
-    assertThat(400, isLeapYear())
+    assertThat(true, isLeapYear(400));
+    assertThat(false, isLeapYear(401));
+    assertThat(true, isLeapYear(4));
+    assertThat(false, isLeapYear(5));
   }
 }
 
