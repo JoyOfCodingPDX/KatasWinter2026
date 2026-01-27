@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair4;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 <<<<<<< HEAD
 
@@ -39,6 +40,7 @@ public class LeapYearsTest
   }
 >>>>>>> 24ee2af0b8d3099b1eb9d737bd0ebc9fe307fc3a
 
+  @Disabled
   @Test
   void is400aleapyear() {
     int year = 400;

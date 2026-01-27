@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.pair9;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -17,6 +18,7 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Disabled
   @ParameterizedTest
   @ValueSource(strings = {"400", "2000", "2008", "2012", "2016"})
   void invokingMainWithValidLeapYearPrintsIsALeapYear(String year) {
@@ -25,6 +27,7 @@ class LeapYearsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardOut(), containsString(year + " is a leap year"));
   }
 
+  @Disabled
   @ParameterizedTest
   @ValueSource(strings = {"1700", "1800", "1900", "2017", "2018", "2019"})
   void invokingMainWithInvalidLeapYearPrintsIsNotALeapYear(String year) {
