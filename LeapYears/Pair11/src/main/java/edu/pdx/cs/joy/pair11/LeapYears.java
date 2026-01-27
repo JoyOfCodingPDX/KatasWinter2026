@@ -8,4 +8,14 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean leapYear(int num) {
+    if(num % 4 == 0 && num % 100 == 0)
+      return false;
+    else if(num % 4 == 0)
+      return true;
+    else
+      return true;
+  }
+
 }

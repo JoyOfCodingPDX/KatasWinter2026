@@ -10,6 +10,12 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void isLeap(){
+    assert(LeapYears.isLeap(400));
+  }
+
+
 }
 
 
