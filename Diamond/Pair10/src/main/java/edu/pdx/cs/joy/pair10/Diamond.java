@@ -9,16 +9,25 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    List<String> argsList = Arrays.asList(args);
+    if (args.length != 1) {
+      System.err.println("Usage: java edu.pdx.cs.joy.pair10.Diamond <letter>");
+      System.err.println("Example: java edu.pdx.cs.joy.pair10.Diamond C");
+      System.exit(1);
+    }
 
-    String[] storeDiamondShape = new String[]{};
+    String raw = args[0].trim().replace("'", "").replace("\"", "");
+    if (raw.isEmpty()) {
+      System.err.println("Please enter a letter between A and Z");
+      System.exit(1);
+    }
 
-    char input = args[1].replace("'", "").toUpperCase().charAt(0);
+    char input = Character.toUpperCase(raw.charAt(0));
 
     if (input < 'A' || input > 'Z') {
       System.err.println("Please enter a letter between A and Z");
       System.exit(1);
     }
+
     System.out.print(printDiamond(input));
   }
   public static String printDiamond(char letter)
