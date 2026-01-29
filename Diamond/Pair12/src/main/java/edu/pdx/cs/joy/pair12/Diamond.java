@@ -4,8 +4,29 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class Diamond {
 
+  public static void printline(int num_space, int outer_space, char letter)
+  {
+    int i = 0;
+    while(i < num_space)
+    {
+      System.out.println(" ");
+    }
+
+    System.out.println(letter);
+
+    i = 0;
+    while(i < outer_space)
+    {
+      System.out.println(" ")
+    }
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    List<char> alphabet = 
+    for (int i = 0; i < 26; i++)
+    {
+
+    }
   }
 }
