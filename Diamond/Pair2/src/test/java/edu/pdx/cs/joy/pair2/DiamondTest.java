@@ -7,7 +7,12 @@ public class DiamondTest
 
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    Diamond newPattern = new Diamond();
   }
 
+  @Test
+  void diamondNeedsTwoOrMoreLetters()
+  {
+    Diamond letters = new Diamond("A", "B");
+    assert(letters, "A", "B");
 }
