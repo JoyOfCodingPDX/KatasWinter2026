@@ -4,8 +4,12 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class Diamond {
 
-  public String printDiamond(String letter){
-    return letter;
+  public String printDiamond(char letter){
+    char start = 'A';
+    int distance = (int) letter - (int) start;
+    int lines = (distance * 2) - 1;
+    String s = String.valueOf(lines);
+    return s;
   }
 
   public int asciiValue(char letter){

@@ -8,22 +8,39 @@ import java.util.Arrays;
 public class Diamond {
 
   public static void printDiamond(List<Character> alphabet, char input){
-    for(int i = 0; i)
+    int char_as_ascii = (int) input;
+    for(int i = 66; i <= char_as_ascii; i++)
+    {
+      printline();
+    }
   }
 
   public static void printline(int num_space, int outer_space, char letter) {
     int i = 0;
-    while (i < num_space) {
-      System.out.println(" ");
-      i++;
+    if (letter == 'A')
+    {
+      while (i < num_space) {
+        System.out.println(" ");
+        i++;
+      }
+
+      System.out.println(letter);
     }
+    else {
+      while (i < num_space) {
+        System.out.println(" ");
+        i++;
+      }
 
-    System.out.println(letter);
+      System.out.println(letter);
 
-    i = 0;
-    while (i < outer_space) {
-      System.out.println(" ");
-      i++;
+      i = 0;
+      while (i < outer_space) {
+        System.out.println(" ");
+        i++;
+      }
+
+      System.out.println(letter);
     }
   }
 
