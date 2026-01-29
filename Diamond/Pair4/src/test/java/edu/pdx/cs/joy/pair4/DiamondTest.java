@@ -10,6 +10,15 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void cleanDiamondsD(){
+    Diamond.cleanDiamonds('D');
+  }
+
+  @Test
+  void cleanDiamondsH(){
+    Diamond.cleanDiamonds('H');
+  }
 }
 
 
