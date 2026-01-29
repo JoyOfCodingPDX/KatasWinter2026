@@ -7,7 +7,7 @@ public class DiamondTest
 
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    new edu.pdx.cs.joy.pair5.Diamond();
   }
 
 }
