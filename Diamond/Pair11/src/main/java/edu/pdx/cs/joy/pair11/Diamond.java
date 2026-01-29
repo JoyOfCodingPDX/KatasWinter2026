@@ -7,6 +7,10 @@ public class Diamond {
   public String printDiamond(String letter){
     return letter;
   }
+
+  public int asciiValue(char letter){
+    return (int) letter;
+  }
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
