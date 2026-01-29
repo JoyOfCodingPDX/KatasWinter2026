@@ -26,6 +26,9 @@
     <developer>
       <name>Jon Schmidt</name>
     </developer>
+    <developer>
+      <name>Felipe</name>
+    </developer>
   </developers>
 
   <build>
