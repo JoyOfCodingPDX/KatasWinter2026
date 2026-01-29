@@ -11,8 +11,13 @@ public class DiamondTest
   }
 
   @Test
-  private void cleanDiamondsTest(){
+  void cleanDiamondsD(){
+    Diamond.cleanDiamonds('D');
+  }
 
+  @Test
+  void cleanDiamondsH(){
+    Diamond.cleanDiamonds('H');
   }
 }
 
