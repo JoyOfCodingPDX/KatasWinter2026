@@ -15,32 +15,27 @@ public class LeapYearsTest
     new LeapYears();
   }
 
-
+  @Test
   void is100aLeapYear() {
     int year = 100;
-    boolean expected = false;
-    assertThat(year, equalTo(expected));
+    int expected = 0;
+    int result = LeapYears.isLeapYear(year);
+    assertThat(result, equalTo(expected));
   }
-
-  private static void assertLeapYear(int year, boolean expected){
-    int num = LeapYears.isLeapYear(year);
-    assertThat(num, equalTo(expected));
-  }
-
-}
-
-
 
   @Disabled
   @Test
   void is400aleapyear() {
     int year = 400;
     int expected = 1;
-    assertThat(year, equalTo(expected));
+    int result = LeapYears.isLeapYear(year);
+    assertThat(result, equalTo(expected));
   }
 
   private static void assertLeapYear(int year, boolean expected){
     int num = LeapYears.isLeapYear(year);
-    assertThat(num, equalTo(expected));
+    int expectedInt = expected ? 1 : 0;
+    assertThat(num, equalTo(expectedInt));
   }
 }
+
