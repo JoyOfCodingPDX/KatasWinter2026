@@ -22,6 +22,10 @@ public class Diamond {
       for (int i = letter - 'A'; i >= 0; i--) {
         printSpaces(i);
         System.out.print(ALPHABET.charAt(currentLetter));
+        if (currentLetter != 0) {
+          printSpaces(i);
+          System.out.print(ALPHABET.charAt(currentLetter));
+        }
         System.out.println();
         currentLetter++;
       }
