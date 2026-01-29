@@ -45,35 +45,5 @@ public class Diamond {
         currentLetter--;
       }
     }
-//    System.out.println('C' - 'A');
-//    System.out.println('C' - 3);
-
-    /*
-    [spaces]A
-    [spaces][Letter][spaces][Letter]
-
-
-    2A
-    1B1B
-    0C3C
-
-    3A
-    2B1B
-    1C3C
-    0D5D
-    1C3C
-    2B1B
-    3A
-
-    prefix: letter-A down to zero, then back up
-    inner: from 1 to whatever, incrementing by 2, then decrementing by 2
-
-
-
-     */
   }
 }
-//   A
-//  B B
-// C   C
-//D     D
