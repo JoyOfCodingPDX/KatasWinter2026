@@ -10,6 +10,12 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void letterPrintsPrecedingSpaces() {
+    Diamond testDiamond = new Diamond();
+    testDiamond.printLine('A');
+  }
+
 }
 
 
