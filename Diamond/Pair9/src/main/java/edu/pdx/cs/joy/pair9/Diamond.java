@@ -28,7 +28,10 @@ public class Diamond {
   C
    */
   private void createDiamond(StringBuilder diamond, char currentLetter, char maxLetter) {
+    int precedingSpace = (maxLetter - currentLetter);
+    diamond.append(" ".repeat(Math.max(0, precedingSpace)));
     diamond.append(currentLetter);
+    diamond.append('\n');
     // Base case: reached the max letter
     if (currentLetter == maxLetter) {
 
