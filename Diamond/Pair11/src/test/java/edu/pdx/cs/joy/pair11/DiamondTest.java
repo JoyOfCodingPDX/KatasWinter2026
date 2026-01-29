@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair11;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,6 +26,7 @@ public class DiamondTest
     assertEquals(" A\nB B\n A", d);
   }
 
+  @Test
   public String instantiateDiamond(String letter){
     Diamond s = new Diamond();
     return s.printDiamond(letter);
@@ -37,6 +39,10 @@ public class DiamondTest
     assertEquals(65, letter);
   }
 
+  @Test
+  void testLines(){
+    assertEquals("5", instantiateDiamond("C"));
+  }
 
 
 }

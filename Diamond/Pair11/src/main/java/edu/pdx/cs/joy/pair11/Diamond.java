@@ -8,7 +8,8 @@ public class Diamond {
     char start = 'A';
     int distance = (int) letter - (int) start;
     int lines = (distance * 2) - 1;
-    return lines;
+    String s = String.valueOf(lines);
+    return s;
   }
 
   public int asciiValue(char letter){
