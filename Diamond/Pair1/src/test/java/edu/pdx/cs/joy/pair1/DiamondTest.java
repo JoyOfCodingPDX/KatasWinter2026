@@ -10,4 +10,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void diamondAReturnsA() {
+    String input = "A";
+    String feedback = new Diamond(input);
+    assertThat(feedback, equals(input));
+  }
 }
