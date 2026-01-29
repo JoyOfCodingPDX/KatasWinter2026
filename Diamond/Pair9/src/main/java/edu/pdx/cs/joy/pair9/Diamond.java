@@ -10,13 +10,21 @@ public class Diamond {
   }
 
   @VisibleForTesting
-  public String printDiamond(char letter)
+  public String createDiamond(char letter)
   {
+    if (letter == 'A') return "A\n";
     StringBuilder diamond = new StringBuilder();
+    createDiamond(diamond, letter, letter);
     return diamond.toString();
   }
 
-  private void printDiamond(StringBuilder diamond, char letter) {
+  /*
+  'C'
+    A
+   B
+  C
+   */
+  private void createDiamond(StringBuilder diamond, char currentLetter, char maxLetter) {
 
   }
 }
