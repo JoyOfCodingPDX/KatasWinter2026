@@ -23,7 +23,7 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    List<char> alphabet = 
+    List<char> alphabet =
     for (int i = 0; i < 26; i++)
     {
 
