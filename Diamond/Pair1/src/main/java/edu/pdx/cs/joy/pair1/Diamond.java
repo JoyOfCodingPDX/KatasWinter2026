@@ -9,21 +9,27 @@ public class Diamond {
   @VisibleForTesting
   public Diamond(String Arg) {
     input = Arg.toUpperCase();
-
   }
   @Override
   public String toString() {
-    // TODO Implement diamond tool
-    // Top half of diamond (recursive)
 
-    // Bottom half of diamond
-    for(char alphabet = input.charAt(0); alphabet >= 'A'; alphabet-- ){
+    return diamondize();
+    }
 
+
+  public String diamondize() {
+
+    String temp = "";
+    char toValue = input.charAt(0);
+    int interior =
+
+    for (char alphabet = toValue; alphabet >= 'A'; alphabet-- ){
+      StringBuilder sb = new StringBuilder();
+              sb.append()
     }
     return input;
+
   }
-
-
 
 
 

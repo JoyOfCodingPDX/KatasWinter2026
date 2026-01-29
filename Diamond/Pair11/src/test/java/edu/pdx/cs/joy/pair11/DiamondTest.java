@@ -27,7 +27,7 @@ public class DiamondTest
   }
 
   @Test
-  public String instantiateDiamond(String letter){
+  public String instantiateDiamond(char letter){
     Diamond s = new Diamond();
     return s.printDiamond(letter);
   }
@@ -41,7 +41,7 @@ public class DiamondTest
 
   @Test
   void testLines(){
-    assertEquals("5", instantiateDiamond("C"));
+    assertEquals("9", instantiateDiamond('E'));
   }
 
 

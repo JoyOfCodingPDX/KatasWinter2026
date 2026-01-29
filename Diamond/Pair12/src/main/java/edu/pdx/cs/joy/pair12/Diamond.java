@@ -9,9 +9,14 @@ public class Diamond {
 
   public static void printDiamond(List<Character> alphabet, char input){
     int char_as_ascii = (int) input;
-    for(int i = 66; i <= char_as_ascii; i++)
+    int distance = 65 - char_as_ascii;
+    if (input == 'A'){
+      System.out.println("A");
+      return;
+    }
+    for(int i = 0; i <= distance; i++)
     {
-      printline();
+      printline(distance - i, (2*i)+1, input);
     }
   }
 
@@ -50,6 +55,6 @@ public class Diamond {
     for (int i = 65; i <= 90; i++) {
       alphabet.add((char) i);
     }
-    System.out.println(alphabet);
+    printDiamond(alphabet, args[1].charAt(0));
   }
 }
