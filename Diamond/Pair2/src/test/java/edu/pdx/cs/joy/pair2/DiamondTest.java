@@ -28,9 +28,12 @@ public class DiamondTest {
   {
     //Diamond diamond = new Diamond("C");
     Collection<String> pattern = new ArrayList<>();
-    pattern.add("A B C");
+    pattern.add("A");
+    pattern.add("B");
+    pattern.add("C");
     assertThat(pattern.size(), equalTo(3));
   }
+
 }
 
 

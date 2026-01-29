@@ -29,14 +29,24 @@ public class Diamond {
    */
   private void createDiamond(StringBuilder diamond, char currentLetter, char maxLetter) {
     int precedingSpace = (maxLetter - currentLetter);
-    diamond.append(" ".repeat(Math.max(0, precedingSpace)));
-    diamond.append(currentLetter);
-    diamond.append('\n');
+
+    StringBuilder line = new StringBuilder();
+    line.append(" ".repeat(Math.max(0, precedingSpace)));
+    line.append(currentLetter);
+    if (currentLetter != 'A') {
+      // Spaces + right side
+      int spaces = 2 * (currentLetter - 'A') - 1;
+      line.append(" ".repeat(spaces));
+      line.append(currentLetter);
+    }
+
+    line.append('\n');
+    diamond.append(line);
     // Base case: reached the max letter
     if (currentLetter == maxLetter) {
-
       return;
     }
     createDiamond(diamond, currentLetter += 1, maxLetter);
+    diamond.append(line);
   }
 }
