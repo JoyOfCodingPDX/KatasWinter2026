@@ -25,5 +25,12 @@ public class DiamondTest
     Diamond diamond = new Diamond();
     assertEquals(3, diamond.getArrayFromChar('B').size());
   }
+
+  @Test
+  void middleArrayEqualsArrayLengthOne() {
+    Diamond diamond = new Diamond();
+    String result= diamond.getMiddleRow();
+    assertEquals('A', result.charAt(0));
+  }
 }
 
