@@ -6,7 +6,7 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    cleanDiamonds('D');
+    cleanDiamonds('C');
     //System.err.println("Missing command line arguments");
   }
 
@@ -37,7 +37,7 @@ public class Diamond {
 
       System.out.print((char)(arg - i - 1));
 
-      for (int k = 0; k < count - i - 1; k++){
+      for (int k = 0; k < 2 * (count - i) - 3; k++){
         System.out.print(" ");
       }
 
