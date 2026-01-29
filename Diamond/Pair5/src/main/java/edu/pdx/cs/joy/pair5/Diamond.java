@@ -6,6 +6,24 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+    } else {
+      System.out.println();
+    }
+    System.out.println('C' - 'A');
+    System.out.println('C' - 3);
+
+    /*
+    [spaces]A
+    [spaces][Letter][spaces][Letter]
+
+    C
+    2A
+    1B
+    0C
+    1B
+    2A
+     */
   }
 }
