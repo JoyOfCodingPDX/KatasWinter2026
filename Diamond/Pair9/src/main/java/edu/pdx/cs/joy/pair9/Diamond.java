@@ -8,4 +8,15 @@ public class Diamond {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  @VisibleForTesting
+  public String printDiamond(char letter)
+  {
+    StringBuilder diamond = new StringBuilder();
+    return diamond.toString();
+  }
+
+  private void printDiamond(StringBuilder diamond, char letter) {
+
+  }
 }
