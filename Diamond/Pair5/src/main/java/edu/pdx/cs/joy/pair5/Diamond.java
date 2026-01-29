@@ -4,6 +4,8 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class Diamond {
 
+  private final static String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
   private static void printSpaces(int spaces){
     for (int i = 0; i < spaces; i++){
       System.out.print(" ");
@@ -15,10 +17,13 @@ public class Diamond {
       System.err.println("Missing command line arguments");
     } else {
       char letter = args[0].charAt(0);
+      int currentLetter = 0;
 
-      for (int i = letter - 'A'; i > 0; i--) {
+      for (int i = letter - 'A'; i >= 0; i--) {
         printSpaces(i);
-        System.out.println(letter);
+        System.out.print(ALPHABET.charAt(currentLetter));
+        System.out.println();
+        currentLetter++;
       }
     }
 //    System.out.println('C' - 'A');
@@ -28,7 +33,7 @@ public class Diamond {
     [spaces]A
     [spaces][Letter][spaces][Letter]
 
-    C
+
     2A
     1B
     0C
