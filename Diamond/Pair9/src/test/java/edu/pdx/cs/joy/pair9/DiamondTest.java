@@ -22,6 +22,13 @@ public class DiamondTest
   }
 
   @Test
+  void createDiamondWithB() {
+    Diamond testDiamond = new Diamond();
+    String result = testDiamond.createDiamond('B');
+    assertThat(result, equalTo(" A\nB B\n A\n"));
+  }
+
+  @Test
   void letterPrintsPrecedingSpaces() {
     Diamond testDiamond = new Diamond();
     String result = testDiamond.createDiamond('C');
