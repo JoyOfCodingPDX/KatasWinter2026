@@ -16,18 +16,21 @@ public class Diamond {
     return letterList;
   }
 
+  private void modifyRow(Character letter) {
+  }
+
   public String getMiddleRow () {
     return "A";
   }
 
-  public String diamondString(char letter) {
+  public String diamondString(Character letter) {
     ArrayList<Character> list = buildRow(letter); // array of length
     StringBuilder result = new StringBuilder();
     list.set(list.size() / 2, letter);
-    for (int i = 0; i < list.size() / 2; i++) {
-      //TBC
+    for (int i = 0; i <= list.size() / 2; i++) {
+      result.append((list.get(i)).toString());
     }
-    return result;
+    return result.toString();
   }
   @VisibleForTesting
   public static void main(String[] args) {

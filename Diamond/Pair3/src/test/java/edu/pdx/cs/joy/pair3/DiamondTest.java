@@ -19,13 +19,13 @@ public class DiamondTest
   @Test
   void characterAGivesArrayLengthOne () {
     Diamond diamond = new Diamond();
-    assertEquals(1, diamond.getArrayFromChar('A').size());
+    assertEquals(1, diamond.buildRow('A').size());
   }
 
   @Test
   void characterBGivesArrayLengthThree() {
     Diamond diamond = new Diamond();
-    assertEquals(3, diamond.getArrayFromChar('B').size());
+    assertEquals(3, diamond.buildRow('B').size());
   }
 
   @Test
@@ -36,10 +36,19 @@ public class DiamondTest
   }
 
   @Test
-  void canGetDiamondString() {
+  void canGetDiamondStringSimple() {
     Diamond diamond = new Diamond();
     String result = diamond.diamondString('A');
     assertThat(result, containsString("A"));
+  }
+
+  @Test
+  void canGetDiamondStringC() {
+    Diamond diamond = new Diamond();
+    String result = diamond.diamondString('A');
+    assertThat(result, containsString("A"));
+    assertThat(result, containsString("B B"));
+    assertThat(result, containsString("C   C"));
   }
 }
 
