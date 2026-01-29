@@ -10,6 +10,7 @@ public class Diamond {
     while(i < num_space)
     {
       System.out.println(" ");
+      i++;
     }
 
     System.out.println(letter);
@@ -17,16 +18,16 @@ public class Diamond {
     i = 0;
     while(i < outer_space)
     {
-      System.out.println(" ")
+      System.out.println(" ");
     }
   }
 
   @VisibleForTesting
   public static void main(String[] args) {
-    List<char> alphabet =
-    for (int i = 0; i < 26; i++)
+    List<char> alphabet = Arrays.aslist();
+    for (int i = 65; i < 90; i++)
     {
-
+        alphabet.add((char) i);
     }
-  }
+    System.out.println(alphabet);
 }
