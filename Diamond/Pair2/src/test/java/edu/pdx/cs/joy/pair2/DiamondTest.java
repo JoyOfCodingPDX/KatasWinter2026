@@ -15,13 +15,13 @@ public class DiamondTest {
   void firstLetterHasToBeA()
   {
     Diamond diamond = new Diamond("A");
-    assertThat(diamond.getLetter(), "A");
+    assertThat(diamond.getLetter(), ContainsString("A"));
   }
 
 }
 
 
- /*
+/*
   @Test
   void diamondNeedsTwoOrMoreLetters()
   {
