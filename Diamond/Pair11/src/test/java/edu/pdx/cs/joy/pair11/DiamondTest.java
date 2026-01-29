@@ -22,7 +22,7 @@ public class DiamondTest
   void canPrintB(){
     Diamond s = new Diamond();
     String d = s.printDiamond("B");
-    assertEquals("B", d);
+    assertEquals(" A\nB B\n A", d);
   }
 
   public String instantiateDiamond(String letter){
