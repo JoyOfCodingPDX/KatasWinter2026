@@ -30,6 +30,15 @@ public class DiamondTest
     return s.printDiamond(letter);
   }
 
+  @Test
+  void asciiValueasInt(){
+    Diamond s = new Diamond();
+    int letter = s.asciiValue('A');
+    assertEquals(65, letter);
+  }
+
+
+
 }
 
 
