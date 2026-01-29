@@ -18,12 +18,14 @@ public class Diamond {
     } else {
       char letter = args[0].charAt(0);
       int currentLetter = 0;
+      int innerSpaces = 1;
 
       for (int i = letter - 'A'; i >= 0; i--) {
         printSpaces(i);
         System.out.print(ALPHABET.charAt(currentLetter));
         if (currentLetter != 0) {
-          printSpaces(i);
+          printSpaces(innerSpaces);
+          innerSpaces+=2;
           System.out.print(ALPHABET.charAt(currentLetter));
         }
         System.out.println();
@@ -39,10 +41,26 @@ public class Diamond {
 
 
     2A
-    1B
-    0C
-    1B
-    2A
+    1B1B
+    0C3C
+
+    3A
+    2B1B
+    1C3C
+    0D5D
+    1C3C
+    2B1B
+    3A
+
+    prefix: letter-A down to zero, then back up
+    inner: from 1 to whatever, incrementing by 2, then decrementing by 2
+
+
+
      */
   }
 }
+//   A
+//  B B
+// C   C
+//D     D
