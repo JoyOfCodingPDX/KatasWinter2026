@@ -4,8 +4,8 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class Diamond {
 
-  public String printDiamond(){
-    return "A";
+  public String printDiamond(String letter){
+    return letter;
   }
   @VisibleForTesting
   public static void main(String[] args) {

@@ -15,9 +15,21 @@ public class DiamondTest
 
   @Test
   void canPrintA(){
+    assertEquals("A", instantiateDiamond("A"));
+  }
+
+  @Test
+  void canPrintB(){
     Diamond s = new Diamond();
-    String s = Diamond.printDiamond();
-    assertEquals("A", s)}
+    String d = s.printDiamond("B");
+    assertEquals("B", d);
+  }
+
+  public String instantiateDiamond(String letter){
+    Diamond s = new Diamond();
+    return s.printDiamond(letter);
+  }
+
 }
 
 
