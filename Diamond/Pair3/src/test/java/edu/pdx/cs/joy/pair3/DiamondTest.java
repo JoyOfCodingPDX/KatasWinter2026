@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiamondTest
@@ -27,10 +29,17 @@ public class DiamondTest
   }
 
   @Test
-  void middleArrayEqualsArrayLengthOne() {
+  void middleArrayEqualsA() {
     Diamond diamond = new Diamond();
     String result= diamond.getMiddleRow();
     assertEquals('A', result.charAt(0));
+  }
+
+  @Test
+  void canGetDiamondString() {
+    Diamond diamond = new Diamond();
+    String result = diamond.diamondString('A');
+    assertThat(result, containsString("A"));
   }
 }
 

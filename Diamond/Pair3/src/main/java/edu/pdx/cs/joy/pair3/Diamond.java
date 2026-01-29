@@ -19,6 +19,13 @@ public class Diamond {
   public String getMiddleRow () {
     return "A";
   }
+
+  public String diamondString(char letter) {
+    ArrayList<Character> list = getArrayFromChar(letter); // array of length
+    String result = "";
+    list.set(list.size() / 2, letter);
+    return result;
+  }
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
