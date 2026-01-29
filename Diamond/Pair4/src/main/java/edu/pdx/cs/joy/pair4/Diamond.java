@@ -6,8 +6,11 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
     cleanDiamonds('D');
-    //System.err.println("Missing command line arguments");
   }
 
   public static void cleanDiamonds(char arg){

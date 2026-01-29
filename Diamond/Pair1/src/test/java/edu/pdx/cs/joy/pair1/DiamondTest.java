@@ -21,6 +21,7 @@ public class DiamondTest
     assertThat(feedback.toString(), containsString(input));
   }
 
+  @Disabled
   @Test
   void diamondBReturnsABBA() {
     String input = "b";

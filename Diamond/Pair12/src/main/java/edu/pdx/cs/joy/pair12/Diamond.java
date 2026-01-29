@@ -51,6 +51,10 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
+    if (args.length < 2) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
     List<Character> alphabet = new ArrayList<>();
     for (int i = 65; i <= 90; i++) {
       alphabet.add((char) i);

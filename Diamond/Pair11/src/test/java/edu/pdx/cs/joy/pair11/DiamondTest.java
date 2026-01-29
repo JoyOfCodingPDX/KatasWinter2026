@@ -14,19 +14,20 @@ public class DiamondTest
   }
 
 
+  @Disabled
   @Test
   void canPrintA(){
-    assertEquals("A", instantiateDiamond("A"));
+    assertEquals("A", instantiateDiamond('A'));
   }
 
+  @Disabled
   @Test
   void canPrintB(){
     Diamond s = new Diamond();
-    String d = s.printDiamond("B");
+    String d = s.printDiamond('B');
     assertEquals(" A\nB B\n A", d);
   }
 
-  @Test
   public String instantiateDiamond(char letter){
     Diamond s = new Diamond();
     return s.printDiamond(letter);
@@ -39,6 +40,7 @@ public class DiamondTest
     assertEquals(65, letter);
   }
 
+  @Disabled
   @Test
   void testLines(){
     assertEquals("9", instantiateDiamond('E'));

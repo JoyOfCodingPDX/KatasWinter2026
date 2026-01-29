@@ -11,7 +11,7 @@ public class Diamond {
     for(int i = 0; i < distance; i++){
       System.out.println(letter);
     }
-    return
+    return "";
   }
 
   public int asciiValue(char letter){

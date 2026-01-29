@@ -10,22 +10,23 @@ public class Diamond {
   @VisibleForTesting
   public static void main(String[] args) {
     if (args.length != 1) {
+      System.err.println("Missing command line arguments");
       System.err.println("Usage: java edu.pdx.cs.joy.pair10.Diamond <letter>");
       System.err.println("Example: java edu.pdx.cs.joy.pair10.Diamond C");
-      System.exit(1);
+      return;
     }
 
     String raw = args[0].trim().replace("'", "").replace("\"", "");
     if (raw.isEmpty()) {
       System.err.println("Please enter a letter between A and Z");
-      System.exit(1);
+      return;
     }
 
     char input = Character.toUpperCase(raw.charAt(0));
 
     if (input < 'A' || input > 'Z') {
       System.err.println("Please enter a letter between A and Z");
-      System.exit(1);
+      return;
     }
 
     System.out.print(printDiamond(input));
