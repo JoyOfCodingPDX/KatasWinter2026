@@ -26,6 +26,10 @@ public class Diamond {
     return this.letter;
   }
 
+  public Collection<Diamond> getPattern() {
+    return pattern;
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
