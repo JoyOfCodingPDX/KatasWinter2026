@@ -55,6 +55,6 @@ public class Diamond {
     for (int i = 65; i <= 90; i++) {
       alphabet.add((char) i);
     }
-    printDiamond(alphabet, args[0]);
+    printDiamond(alphabet, args[1].charAt(0));
   }
 }
