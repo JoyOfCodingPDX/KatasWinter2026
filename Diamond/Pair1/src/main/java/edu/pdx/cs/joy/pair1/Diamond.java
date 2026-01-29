@@ -6,7 +6,14 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
+    if (0 == args.length) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+    else if (1 < args.length) {
+      System.err.println("Too many command line arguments");
+      return;
+    }
     
-    // System.err.println("Missing command line arguments");
   }
 }
