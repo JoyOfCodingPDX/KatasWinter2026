@@ -37,6 +37,13 @@ public class DiamondTest
     assertThat(result, containsString("C"));
   }
 
+  @Test
+  void createDiamondWithC() {
+    Diamond testDiamond = new Diamond();
+    String result = testDiamond.createDiamond('C');
+    assertThat(result, equalTo("  A\n B B\nC   C\n B B\n  A\n"));
+  }
+
 }
 
 
