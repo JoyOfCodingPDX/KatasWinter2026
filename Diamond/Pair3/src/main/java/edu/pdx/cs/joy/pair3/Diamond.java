@@ -17,6 +17,21 @@ public class Diamond {
   }
 
   private void modifyRow(Character letter) {
+    // clear the row
+    for(int i = 0; i < letterList.size(); i++) {
+      letterList.set(i, ' ');
+    }
+    if(letter == 'A') {
+      letterList.set(0, 'A');
+      return;
+    }
+    int middleWhiteSpace = ((int) letter - 66)*2 + 1;
+    // if not a (-65), add whitespace and two letters
+    // b = 66-65 = 1
+    // whitespace = 1
+    // c = 67-65 = 2 + 1
+
+   //TODO: HOW DO WE CENTER THIS????????
   }
 
   public String getMiddleRow () {
