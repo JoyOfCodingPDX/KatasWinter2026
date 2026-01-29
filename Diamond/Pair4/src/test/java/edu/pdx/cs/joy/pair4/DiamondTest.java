@@ -10,6 +10,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  private void cleanDiamondsTest(){
+
+  }
 }
 
 
