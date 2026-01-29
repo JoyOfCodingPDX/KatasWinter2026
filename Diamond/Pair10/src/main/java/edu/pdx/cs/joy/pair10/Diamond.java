@@ -10,24 +10,45 @@ public class Diamond {
   @VisibleForTesting
   public static void main(String[] args) {
     List<String> argsList = Arrays.asList(args);
+
     String[] storeDiamondShape = new String[]{};
-    if (argsList.size() != 3) {
-      return;
+
+    char input = args[1].replace("'", "").toUpperCase().charAt(0);
+
+    if (input < 'A' || input > 'Z') {
+      System.err.println("Please enter a letter between A and Z");
+      System.exit(1);
     }
-    else {
-      for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-          if ((i == 0 || i == 4) && j == 2) {
-            System.out.print("A");
-          } else if ((i == 1 || i == 3) && (j == 1 || j == 3)) {
-            System.out.print("B");
-          } else if (i == 2 && (j == 0 || j == 4)) {
-            System.out.print("C");
-          } else {
-            System.out.print(" ");
-          }
-        }
+    System.out.print(printDiamond(input));
+  }
+  public static String printDiamond(char letter)
+  {
+    int n = letter - 'A';
+    int totalRows = 2 * n + 1;
+    StringBuilder sb = new StringBuilder();
+
+    for (int row = 0; row < totalRows; row++) {
+      int i = row <= n ? row : (2 * n - row);
+      char ch = (char) ('A' + i);
+
+      int outerSpaces = n - i;
+      sb.append(" ".repeat(outerSpaces));
+
+      if (i == 0) {
+        sb.append(ch);
+      } else {
+        int innerSpaces = 2 * i - 1;
+        sb.append(ch)
+                .append(" ".repeat(innerSpaces))
+                .append(ch);
+      }
+
+      if (row < totalRows - 1) {
+        sb.append("\n");
       }
     }
+    return sb.toString();
   }
+
 }
+
