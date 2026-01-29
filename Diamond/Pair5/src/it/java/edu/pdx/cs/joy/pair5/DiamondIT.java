@@ -23,7 +23,7 @@ class DiamondIT extends InvokeMainTestCase {
   @Test
   void invokingMainWithBPrintsFirstTwoLines() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "B");
-    assertThat(result.getTextWrittenToStandardOut(), containsString(" A\nB"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString(" A\nB B"));
   }
 
 

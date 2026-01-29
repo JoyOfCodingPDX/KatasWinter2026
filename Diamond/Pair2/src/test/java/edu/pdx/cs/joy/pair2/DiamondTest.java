@@ -1,21 +1,31 @@
 package edu.pdx.cs.joy.pair2;
 
 import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-public class DiamondTest
-{
+public class DiamondTest {
 
   @Test
   void canInstantiateKataClass() {
     Diamond newPattern = new Diamond();
   }
 
-  @Test
-  void LetterCannotBeA(){}
 
+  @Test
+  void firstLetterHasToBeA()
+  {
+    Diamond diamond = new Diamond("A");
+    assertThat(diamond.getLetter(), ContainsString("A"));
+  }
+
+}
+
+
+/*
   @Test
   void diamondNeedsTwoOrMoreLetters()
   {
-    Diamond letters = new Diamond("A");
-    assert(letters, "A");
-}
+    Diamond letter = new Diamond("A");
+    assert(letter, "A");
+
+ */
