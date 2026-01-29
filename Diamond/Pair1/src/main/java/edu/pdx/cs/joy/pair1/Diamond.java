@@ -5,6 +5,12 @@ import com.google.common.annotations.VisibleForTesting;
 public class Diamond {
 
   @VisibleForTesting
+  public Diamond(String Arg) {
+    String input = Arg.toUpperCase();
+
+  }
+
+  @VisibleForTesting
   public static void main(String[] args) {
     if (0 == args.length) {
       System.err.println("Missing command line arguments");
