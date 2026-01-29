@@ -4,11 +4,21 @@ import com.google.common.annotations.VisibleForTesting;
 
 public class Diamond {
 
+  private final String input;
+
   @VisibleForTesting
   public Diamond(String Arg) {
-    String input = Arg.toUpperCase();
+    input = Arg.toUpperCase();
 
   }
+  @Override
+  public String toString() {
+    return input;
+  }
+
+
+
+
 
   @VisibleForTesting
   public static void main(String[] args) {
