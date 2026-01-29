@@ -11,8 +11,11 @@ public class DiamondTest
   }
 
   @Test
+  void LetterCannotBeA(){}
+
+  @Test
   void diamondNeedsTwoOrMoreLetters()
   {
-    Diamond letters = new Diamond("A", "B");
-    assert(letters, "A", "B");
+    Diamond letters = new Diamond("A");
+    assert(letters, "A");
 }

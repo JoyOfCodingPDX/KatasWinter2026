@@ -4,20 +4,34 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 
 public class DiamondTest
 {
 
-  @Disabled
   @Test
   void canInstantiateKataClass() {
-    new Diamond();
+    new Diamond("a");
   }
 
   @Test
   void diamondAReturnsA() {
     String input = "A";
-    String feedback = new Diamond(input);
-    assertThat(feedback, equals(input));
+    Diamond feedback = new Diamond(input);
+    assertThat(feedback.toString(), containsString(input));
   }
+
+  @Test
+  void diamondBReturnsABBA() {
+    String input = "b";
+    Diamond diamond = new Diamond(input);
+    assertThat(diamond.toString() ,
+            containsString("""
+              A 
+             B B
+              A 
+             """));
+  }
+
+
 }
