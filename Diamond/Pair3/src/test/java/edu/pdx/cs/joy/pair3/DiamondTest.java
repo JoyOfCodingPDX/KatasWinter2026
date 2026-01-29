@@ -14,13 +14,16 @@ public class DiamondTest
     new Diamond();
   }
 
-  void DiamondMadeAnArray() {
-    Diamond diamond = new Diamond();
-    assertEquals(ArrayList.class, diamond.getArray().getClass());
-  }
-
+  @Test
   void characterAGivesArrayLengthOne () {
     Diamond diamond = new Diamond();
+    assertEquals(1, diamond.getArrayFromChar('A').size());
+  }
+
+  @Test
+  void characterBGivesArrayLengthThree() {
+    Diamond diamond = new Diamond();
+    assertEquals(3, diamond.getArrayFromChar('B').size());
   }
 }
 
