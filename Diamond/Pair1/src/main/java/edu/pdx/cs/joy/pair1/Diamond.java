@@ -13,6 +13,13 @@ public class Diamond {
   }
   @Override
   public String toString() {
+    // TODO Implement diamond tool
+    // Top half of diamond (recursive)
+
+    // Bottom half of diamond
+    for(char alphabet = input.charAt(0); alphabet >= 'A'; alphabet-- ){
+
+    }
     return input;
   }
 
