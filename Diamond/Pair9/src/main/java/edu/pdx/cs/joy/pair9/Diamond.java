@@ -12,9 +12,12 @@ public class Diamond {
   @VisibleForTesting
   public String createDiamond(char letter)
   {
+    // Base case: only an A
     if (letter == 'A') return "A\n";
+
     StringBuilder diamond = new StringBuilder();
-    createDiamond(diamond, letter, letter);
+
+    createDiamond(diamond, 'A', letter);
     return diamond.toString();
   }
 
@@ -25,6 +28,12 @@ public class Diamond {
   C
    */
   private void createDiamond(StringBuilder diamond, char currentLetter, char maxLetter) {
+    diamond.append(currentLetter);
+    // Base case: reached the max letter
+    if (currentLetter == maxLetter) {
 
+      return;
+    }
+    createDiamond(diamond, currentLetter += 1, maxLetter);
   }
 }
