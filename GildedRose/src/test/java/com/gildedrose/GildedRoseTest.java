@@ -3,6 +3,8 @@ package com.gildedrose;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
@@ -22,8 +24,8 @@ class GildedRoseTest {
         Item[] items = new Item[] {regularItem};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(9, regularItem.sellIn);
-        assertEquals(19, regularItem.quality);
+        assertThat(regularItem.sellIn, equalTo(9));
+        assertThat(regularItem.quality, equalTo(19));
     }
 
     @Test
@@ -32,8 +34,8 @@ class GildedRoseTest {
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(1, agedBrie.sellIn);
-        assertEquals(1, agedBrie.quality);
+        assertThat(agedBrie.sellIn, equalTo(1));
+        assertThat(agedBrie.quality, equalTo(1));
     }
 
 }
