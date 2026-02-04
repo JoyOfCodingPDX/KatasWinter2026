@@ -14,6 +14,30 @@ class DiamondIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void invokingMainWithAPrintsAnA() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "A");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("A"));
+  }
+//
+//  @Test
+//  void invokingMainWithBPrintsFirstTwoLines() {
+//    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "B");
+//    assertThat(result.getTextWrittenToStandardOut(), containsString(" A\nB B"));
+//  }
+//
+//  @Test
+//  void invokingMainWithDPrintsTopHalf() {
+//    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "D");
+//    assertThat(result.getTextWrittenToStandardOut(), containsString("   A\n  B B\n C   C\nD     D\n"));
+//  }
+
+  @Test
+  void invokingMainWithDPrintsDiamond() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Diamond.class, "D");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("   A\n  B B\n C   C\nD     D\n"));
+  }
+
 
 }
 
