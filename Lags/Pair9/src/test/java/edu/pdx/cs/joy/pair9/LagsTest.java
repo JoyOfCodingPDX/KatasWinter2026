@@ -7,7 +7,12 @@ public class LagsTest
 
   @Test
   void canInstantiateKataClass() {
-    new Lags();
+    Lags flight1 = new Lags("AF514", 0, 5, 10);
+  }
+
+  @Test
+  void isConfict(){
+
   }
 
 }
