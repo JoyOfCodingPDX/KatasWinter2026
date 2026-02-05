@@ -35,7 +35,12 @@ public class LagsTest
     Lags flight3 = new Lags("AF515", 5, 9, 7);
     Lags flight4 = new Lags("BA01", 6, 9, 8);
     ArrayList<ArrayList<Lags>> flightComboList = new ArrayList<ArrayList<Lags>>();
-    flightComboList = Lags.createFlightCombination(flightComboList);
+    ArrayList<Lags> flightList = new ArrayList<Lags>();
+    flightList.add(flight1);
+    flightList.add(flight2);
+    flightList.add(flight3);
+    flightList.add(flight4);
+    flightComboList = Lags.createFlightCombination(flightList);
   }
 }
 
