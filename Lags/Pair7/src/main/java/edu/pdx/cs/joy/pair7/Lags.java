@@ -13,9 +13,11 @@ public class Lags {
     System.err.println("Missing command line arguments");
     }
 
+//    String[] collection = new String[]{};
 
-    for (String hello : args) {
-      System.out.println(hello);
+    for (String ticket : args) {
+      System.out.println(ticket);
+      int[] startTime = new int[args.length / 4];
     }
 
     return;
