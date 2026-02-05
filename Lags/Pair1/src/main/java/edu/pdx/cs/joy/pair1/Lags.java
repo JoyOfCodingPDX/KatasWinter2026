@@ -22,9 +22,12 @@ public class Lags {
 
   public static double maxProfit(Lags[] flight_list) {
     double maxProfit = 0.0;
-    int min = flight_list[0].start;
-    for (int i = 0; i < flight_list.length; i++) {
-      min = Math.min(min, flight_list[i].start);
+    int j = flight_list.length;
+    int latest = -1;
+    for (int i = 0; i < j; i++) {
+      if(flight_list[j].end <= flight_list.start){
+        latest = j;
+      //min = Math.min(min, flight_list[i].start);
     }
   }
 }
