@@ -23,5 +23,12 @@ public class LagsTest
     assertEquals(end, 5);
   }
 
+  @Test
+  void argumentsareone(){
+    String [] args;
+    args = {"arg", "second", "third"};
+
+  }
+
 
 }
