@@ -23,7 +23,9 @@ public class Lags {
           int price2 = Integer.parseInt(parts2[3]);
 
           if(end <= start2 && max < price1 + price2) {
-            max = price1 + price2;
+              max = price1 + price2;
+              end = Integer.parseInt(parts2[2]);
+              price1 = max;
           }
 
         }
