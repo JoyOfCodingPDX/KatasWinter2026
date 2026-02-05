@@ -38,4 +38,17 @@ public class LagsTest
     assertThat(flight.money, equalTo(3));
   }
 
+  @Test
+  void works2() {
+    String[] flights = {
+            "AF514 0 5 10",
+            "CO5 3 7 14",
+            "AF515 5 9 20",
+            "BA01 6 9 8"
+    };
+
+    Lags obj = new Lags();
+    int result = obj.bestRoute(flights);
+    assertThat(result, equalTo(30));
+  }
 }

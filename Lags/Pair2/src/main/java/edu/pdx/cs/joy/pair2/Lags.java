@@ -6,7 +6,12 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (!is1Argument(args)) {
+      System.err.print("Error: Should only have 1 argument");
+      return;
+    } else {
+      System.err.print("");
+    }
   }
 
   
