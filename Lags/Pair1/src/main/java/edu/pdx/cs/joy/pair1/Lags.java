@@ -21,9 +21,15 @@ public class Lags {
   }
 
   public static int maxProfit(Lags[] flight_list) {
+    if (flight_list == null || flight_list.length == 0) {
+      return 0;
+    }
+
     int j = flight_list.length;
     int[] dp = new int[j];
+
     dp[0] = flight_list[0].price;
+
     for (int i = 1; i < j; i++) {
       int skip = dp[i - 1];
       int take = flight_list[i].price;
@@ -39,4 +45,5 @@ public class Lags {
       dp[i] = Math.max(skip, take);
   }
     return dp[j - 1];
+}
 }
