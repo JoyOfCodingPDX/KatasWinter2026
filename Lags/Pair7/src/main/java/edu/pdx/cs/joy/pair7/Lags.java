@@ -32,7 +32,7 @@ public class Lags {
       endTime[i] = Integer.parseInt(temp[2]);
       price[i] = Integer.parseInt(temp[3]);
       value[i] = flightValue(startTime[i], endTime[i], price[i]);
-      ++i;
+//      ++i;
     }
 
     return;
