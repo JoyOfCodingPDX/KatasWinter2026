@@ -2,6 +2,9 @@ package edu.pdx.cs.joy.pair4;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class LagsTest
 {
 
@@ -19,8 +22,8 @@ public class LagsTest
             "BA01 6 9 8"
     };
 
-
-
+    int result = Lags.bestRoute(flights);
+    assertThat(result, equalTo(18));
   }
 
 }
