@@ -22,7 +22,8 @@ public class LagsTest
             "BA01 6 9 8"
     };
 
-    int result = Lags.bestRoute(flights);
+    Lags obj = new Lags();
+    int result = obj.bestRoute(flights);
     assertThat(result, equalTo(18));
   }
 
