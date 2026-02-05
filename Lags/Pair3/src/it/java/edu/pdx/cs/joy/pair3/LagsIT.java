@@ -22,7 +22,7 @@ class LagsIT extends InvokeMainTestCase {
 
   @Test
   void multipleFLights() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, "AF514 0 5 10", "CO5 5 7 14", "AF515 5 9 7", "BA01 7 9 8");
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, "AF514 0 5 10", "CO5 5 7 14", "AF515 5 9 7", "BA01 12 13 8");
     assertThat(result.getTextWrittenToStandardOut(), containsString("32"));
 
   }
