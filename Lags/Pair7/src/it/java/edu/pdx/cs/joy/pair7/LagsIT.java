@@ -14,6 +14,18 @@ class LagsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void canReadArgsFromCommandLine() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, "hi");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("hi"));
+  }
+
+  @Test
+  void canAssignTicketFromCommandLine() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, "PLANE1 0 5 12");
+
+
+  }
 
 }
 
