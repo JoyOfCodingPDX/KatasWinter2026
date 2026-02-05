@@ -29,11 +29,15 @@ class LagsIT extends InvokeMainTestCase {
   void canReadNonEmptyFile(@TempDir File tempDir) throws IOException {
     File tempFile = new File(tempDir, "tempFile.txt");
     BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile));
-
-    bw.write("AF514 0 5 10");
     tempFile.createNewFile();
+    bw.write("AF514 0 5 10");
+    bw.newLine();
+    bw.close();
     InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, tempFile.getAbsolutePath());
+    assertThat(result.getTextWrittenToStandardError(), containsString("10"));
   }
+
+
 }
 
 
