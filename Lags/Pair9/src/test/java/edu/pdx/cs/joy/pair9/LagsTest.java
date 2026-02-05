@@ -17,6 +17,13 @@ public class LagsTest
     Lags flight2 = new Lags("AF515", 3, 7, 14);
     assertTrue(flight1.hasConflict(flight2));
   }
+
+  @Test
+  void flightNoConflict() {
+    Lags flight1 = new Lags("AF514", 0, 3, 10);
+    Lags flight2 = new Lags("AF515", 3, 7, 14);
+    assertFalse(flight1.hasConflict(flight2));
+  }
 }
 
 
