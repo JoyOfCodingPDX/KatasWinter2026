@@ -12,12 +12,13 @@ import java.util.List;
 
 public class Lags {
 
-  public static String maxEff(List<List<String>> list){
-    return list.get(0).get(0);
+  public List<List<String>> flights;
+  public String maxEff(){
+    return this.flights.getFirst().get(0);
   }
 
-  public static List<List<String>> lags(){
-    return new ArrayList<>(Arrays.asList(
+  public Lags(){
+    this.flights =  new ArrayList<>(Arrays.asList(
             new ArrayList<>(Arrays.asList("AF514", "0", "5", "10")),
             new ArrayList<>(Arrays.asList("C05", "3", "7", "14")),
             new ArrayList<>(Arrays.asList("AF515", "5", "9", "7")),

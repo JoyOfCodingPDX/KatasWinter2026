@@ -14,5 +14,11 @@ class LagsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void is1Argument() {
+    String[] args = {"arg"};
+    invokeMain(Lags.class, args);
 
+    assertThat(result.getTextWrittenToStandardError(),
+  }
 }

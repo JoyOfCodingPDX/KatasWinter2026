@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.pair9;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.ArrayList;
+
 public class Lags {
   public String name;
   public int start;
@@ -24,5 +26,12 @@ public class Lags {
       return true;
     }
     return false;
+  }
+
+  public static ArrayList<ArrayList<Lags>> createFlightCombination(ArrayList<Lags> myList) {
+    ArrayList<ArrayList<Lags>> flightCombinationList = new ArrayList<ArrayList<Lags>>();
+    for(int i = 0; i < myList.size(); i++) {
+    }
+    return flightCombinationList;
   }
 }

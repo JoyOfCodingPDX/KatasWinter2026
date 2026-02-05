@@ -26,4 +26,15 @@ public class LagsTest
     assertThat(result, equalTo(18));
   }
 
+  @Test
+  void canAccessPlaneInfo() {
+    String input = "Flight 1 2 3";
+    Lags.planes flight = new Lags.planes(input);
+
+    assertThat(flight.id, equalTo("Flight"));
+    assertThat(flight.start, equalTo(1));
+    assertThat(flight.duration, equalTo(2));
+    assertThat(flight.money, equalTo(3));
+  }
+
 }
