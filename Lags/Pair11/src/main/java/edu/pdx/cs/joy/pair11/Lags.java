@@ -12,19 +12,20 @@ import java.util.List;
 
 public class Lags {
 
-  @VisibleForTesting
-  public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+  public static String maxEff(List<List<String>> list){
+    return list.get(0).get(0);
   }
-  List<List<String>> listOfFlights =
-          new ArrayList<>(Arrays.asList(
-                  new ArrayList<>(Arrays.asList("AF514", "0", "5", "10")),
-                  new ArrayList<>(Arrays.asList("C05", "3", "7", "14")),
-                  new ArrayList<>(Arrays.asList("AF515", "5", "9", "7")),
-                  new ArrayList<>(Arrays.asList("BA01", "6","9", "8"))
-          ));
 
+  public static List<List<String>> lags(){
+    return new ArrayList<>(Arrays.asList(
+            new ArrayList<>(Arrays.asList("AF514", "0", "5", "10")),
+            new ArrayList<>(Arrays.asList("C05", "3", "7", "14")),
+            new ArrayList<>(Arrays.asList("AF515", "5", "9", "7")),
+            new ArrayList<>(Arrays.asList("BA01", "6","9", "8"))
+    ));
+  }
 
-
+  @VisibleForTesting
+  public static void main(String[] args) {System.err.println("Missing command line arguments");}
 
 }
