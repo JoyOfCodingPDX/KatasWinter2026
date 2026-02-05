@@ -11,10 +11,13 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    try (BufferedReader br = new BufferedReader(new FileReader(args[1]))
-    ) {
-    } catch (FileNotFoundException e) {
-      throw new RuntimeException(e);
+    try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
+      String line;
+      while ((line = br.readLine()) != null){
+        if (line.isEmpty()) {
+          return;
+        }
+      }
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

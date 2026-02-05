@@ -15,4 +15,12 @@ public class Lags {
     return start + duration;
   }
 
+  public static boolean is1Argument(String [] args) {
+    if (args.length != 1) {
+      return false;
+    }
+
+    return true;
+  }
+
 }

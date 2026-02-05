@@ -25,7 +25,6 @@ class LagsIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, tempFile.getAbsolutePath());
     assertThat(result.getTextWrittenToStandardError(), containsString("Empty file provided"));
   }
-
 }
 
 
