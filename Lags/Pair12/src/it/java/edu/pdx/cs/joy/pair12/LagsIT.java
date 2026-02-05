@@ -27,6 +27,12 @@ class LagsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), is(emptyString()));
   }
 
+  @Test
+  void testMockFileCanBeRead()
+  {
+    InputStream flight = Flight.class.getResourceAsStream("flightInfo.txt");
+    assertThat(flight, not(nullValue()));
+  }
 
 }
 
