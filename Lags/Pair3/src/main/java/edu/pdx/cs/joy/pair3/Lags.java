@@ -9,23 +9,26 @@ public class Lags {
   @VisibleForTesting
   public static void main(String[] args) {
 //    System.err.println("Missing command line arguments");
-      int max = 0;
+      int max = -1;
       for (int i = 0; i < args.length; i++){
         String flight1 = args[i];
-        String parts[] = flight1.split(" ");
+        String[] parts = flight1.split(" ");
         int end = Integer.parseInt(parts[2]);
         int price1 = Integer.parseInt(parts[3]);
 
         for (int j = i + 1; j < args.length; j++){
           String flight2 = args[j];
-          String parts2[] = flight1.split(" ");
-          int end = Integer.parseInt(parts[2]);
-          int price1 = Integer.parseInt(parts[3]);
+          String[] parts2 = flight2.split(" ");
+          int start2 = Integer.parseInt(parts2[1]);
+          int price2 = Integer.parseInt(parts2[3]);
 
-
+          if(end <= start2 && max < price1 + price2) {
+            max = price1 + price2;
+          }
 
         }
       }
+      System.out.print(max);
   }
 
   /*
