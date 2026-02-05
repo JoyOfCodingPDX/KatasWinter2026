@@ -24,11 +24,16 @@ public class LagsTest
   }
 
   @Test
-  void argumentsareone(){
-    String [] args;
-    args = {"arg", "second", "third"};
-
+  void argumentsareone_invalid(){
+    String [] args = {"arg", "second", "third"};
+    boolean result = Lags.is1Argument(args);
+    assertEquals(result, false);
   }
 
-
+  @Test
+  void argumentsareone_valid(){
+    String [] args = {"arg"};
+    boolean result = Lags.is1Argument(args);
+    assertEquals(result, true);
+  }
 }
