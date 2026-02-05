@@ -13,3 +13,8 @@ public class LagsTest
 }
 
 
+@Test
+void isValidList(){
+
+}
+
