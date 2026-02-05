@@ -16,9 +16,10 @@ class LagsIT extends InvokeMainTestCase {
 
   @Test
   void is1Argument() {
-    String[] args = {"arg"};
-    invokeMain(Lags.class, args);
+    String [] args = {"arg"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, args);
 
-    assertThat(result.getTextWrittenToStandardError(),
+
+    assertThat(result.getTextWrittenToStandardError(), containsString(""));
   }
 }

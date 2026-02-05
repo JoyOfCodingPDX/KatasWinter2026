@@ -22,8 +22,20 @@ public class LagsTest
             "BA01 6 9 8"
     };
 
-    int result = Lags.bestRoute(flights);
+    Lags obj = new Lags();
+    int result = obj.bestRoute(flights);
     assertThat(result, equalTo(18));
+  }
+
+  @Test
+  void canAccessPlaneInfo() {
+    String input = "Flight 1 2 3";
+    Lags.planes flight = new Lags.planes(input);
+
+    assertThat(flight.id, equalTo("Flight"));
+    assertThat(flight.start, equalTo(1));
+    assertThat(flight.duration, equalTo(2));
+    assertThat(flight.money, equalTo(3));
   }
 
 }

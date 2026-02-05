@@ -20,14 +20,13 @@ public class Lags {
     this.price = price;
   }
 
-  public static double maxProfit(Lags[] flight_list) {
-    double maxProfit = 0.0;
+  public static int maxProfit(Lags[] flight_list) {
     int j = flight_list.length;
-    double[] dp = new double[j];
+    int[] dp = new int[j];
     dp[0] = flight_list[0].price;
     for (int i = 1; i < j; i++) {
-      double skip = dp[i - 1];
-      double take = flight_list[i].price;
+      int skip = dp[i - 1];
+      int take = flight_list[i].price;
 
       for (int n = i - 1; n >= 0; n--) {
         if (flight_list[n].end <= flight_list[i].start) {
