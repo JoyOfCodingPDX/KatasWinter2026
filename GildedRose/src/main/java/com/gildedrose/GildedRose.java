@@ -9,16 +9,9 @@ class GildedRose {
 
     public void updateQuality() {
       for (Item item : items) {
-        if (item instanceof Sulfuras) {
+        if (item instanceof InventoriedItem inventoriedItem) {
+          inventoriedItem.updateQuality();
           continue;
-
-        } else if (item instanceof AgedBrie agedBrie) {
-          agedBrie.updateQuality();
-          continue;
-
-        } else if (item instanceof BackstagePass backstagePass) {
-            backstagePass.updateQuality();
-            continue;
         }
 
         if (item.quality > 0) {

@@ -1,12 +1,13 @@
 package com.gildedrose;
 
-public class BackstagePass extends Item {
+public class BackstagePass extends InventoriedItem {
   static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
 
   public BackstagePass(int sellIn, int quality) {
     super(BACKSTAGE_PASS, sellIn, quality);
   }
 
+  @Override
   public void updateQuality() {
     if (this.sellIn <= 0) {
       this.quality = 0;
