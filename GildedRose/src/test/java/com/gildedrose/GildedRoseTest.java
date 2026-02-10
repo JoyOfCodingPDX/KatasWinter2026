@@ -147,7 +147,7 @@ class GildedRoseTest {
 
     @Test
     void sulfurasNeverChangesInQualityOrSellIn() {
-        Item sulfuras = new Item(GildedRose.SULFURAS, 0, 80);
+        Item sulfuras = new Sulfuras(0, 80);
         Item[] items = new Item[]{sulfuras};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -179,7 +179,7 @@ class GildedRoseTest {
 
     @Test
     void sulfurasWithQuality10NeverChanges() {
-        Item sulfuras = new Item(GildedRose.SULFURAS, 0, 10);
+        Item sulfuras = new Sulfuras(0, 10);
         Item[] items = new Item[]{sulfuras};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
