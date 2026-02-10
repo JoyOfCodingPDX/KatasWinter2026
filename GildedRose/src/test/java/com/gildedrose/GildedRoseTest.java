@@ -30,7 +30,7 @@ class GildedRoseTest {
 
     @Test
     void agedBrieIncreasesInQualityTheOlderItGets() {
-        Item agedBrie = new Item(GildedRose.AGED_BRIE, 2, 0);
+        Item agedBrie = new AgedBrie(2, 0);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -40,7 +40,7 @@ class GildedRoseTest {
 
     @Test
     void agedBrieAtMaxQualityDoesNotIncreaseInQuality() {
-        Item agedBrie = new Item(GildedRose.AGED_BRIE, 2, 50);
+        Item agedBrie = new AgedBrie(2, 50);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -50,7 +50,7 @@ class GildedRoseTest {
 
     @Test
     void afterSellByDateQualityOfAgedBrieIncreasesByTwo() {
-        Item agedBrie = new Item(GildedRose.AGED_BRIE, 0, 0);
+        Item agedBrie = new AgedBrie(0, 0);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -61,7 +61,7 @@ class GildedRoseTest {
 
     @Test
     void afterSellByDateQualityOfAgedBrieIncreasesByTwoUntilItReaches50() {
-        Item agedBrie = new Item(GildedRose.AGED_BRIE, 0, 49);
+        Item agedBrie = new AgedBrie(0, 49);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();

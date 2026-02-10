@@ -2,7 +2,6 @@ package com.gildedrose;
 
 class GildedRose {
   static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
-  static final String AGED_BRIE = "Aged Brie";
   Item[] items;
 
     public GildedRose(Item[] items) {
@@ -13,17 +12,14 @@ class GildedRose {
       for (Item item : items) {
         if (item instanceof Sulfuras) {
           continue;
+
+        } else if (item instanceof AgedBrie) {
+          AgedBrie agedBrie = (AgedBrie) item;
+          agedBrie.updateQuality();
+          continue;
         }
 
         switch (item.name) {
-          case AGED_BRIE -> {
-            if (item.quality < 50) {
-              int qualityImprovement = item.sellIn <= 0 ? 2 : 1;
-              item.quality = Math.min(item.quality + qualityImprovement, 50);
-            }
-            item.sellIn--;
-            continue;
-          }
           case BACKSTAGE_PASS -> {
             if (item.sellIn <= 0) {
               item.quality = 0;
