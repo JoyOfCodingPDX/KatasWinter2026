@@ -10,4 +10,11 @@ public class LagsTest
     new Lags();
   }
 
+  @Test
+  void takeOrSkipOneFlight() {
+    Lags flight1 = new Lags("AF514", 0, 5, 10);
+    Lags[] flights = new Lags[1];
+    flights[0] = flight1;
+    assertEquals(10, Lags.maxProfit(flights));
+  }
 }

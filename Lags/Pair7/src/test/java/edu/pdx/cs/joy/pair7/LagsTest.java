@@ -10,6 +10,10 @@ public class LagsTest
     new Lags();
   }
 
+  @Test
+  void canCalculateFlightValue() {
+    Lags lags = new Lags();
+    float value = lags.flightValue(0, 5, 10);
+    assert(value == 2.0f);
+  }
 }
-
-

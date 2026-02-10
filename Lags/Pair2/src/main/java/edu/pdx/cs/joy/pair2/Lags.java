@@ -6,6 +6,26 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (!is1Argument(args)) {
+      System.err.print("Error: Should only have 1 argument");
+      return;
+    } else {
+      System.err.print("");
+    }
   }
+
+  
+
+  public static int getEndTimeFromStartTime(int start, int duration) {
+    return start + duration;
+  }
+
+  public static boolean is1Argument(String [] args) {
+    if (args.length != 1) {
+      return false;
+    }
+
+    return true;
+  }
+
 }

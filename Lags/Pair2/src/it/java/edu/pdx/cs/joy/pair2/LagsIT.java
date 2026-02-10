@@ -14,5 +14,19 @@ class LagsIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void is1Argument() {
+    String [] args = {"arg"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, args);
 
+    assertThat(result.getTextWrittenToStandardError(), containsString(""));
+  }
+
+  @Test
+  void is1Argument_has2Args() {
+    String [] args = {"arg", "arg2"};
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Lags.class, args);
+
+    assertThat(result.getTextWrittenToStandardError(), containsString("Error: Should only have 1 argument"));
+  }
 }
