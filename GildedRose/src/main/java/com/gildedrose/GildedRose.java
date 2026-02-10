@@ -12,12 +12,16 @@ class GildedRose {
 
     public void updateQuality() {
       for (Item item : items) {
+        switch (item.name) {
+          case SULFURAS -> {
+            continue;
+          }
+        }
+
         if (!item.name.equals(AGED_BRIE)
           && !item.name.equals(BACKSTAGE_PASS)) {
           if (item.quality > 0) {
-            if (!item.name.equals(SULFURAS)) {
-              item.quality--;
-            }
+            item.quality--;
           }
         } else {
           if (item.quality < 50) {
@@ -39,17 +43,13 @@ class GildedRose {
           }
         }
 
-        if (!item.name.equals(SULFURAS)) {
-          item.sellIn--;
-        }
+        item.sellIn--;
 
         if (item.sellIn < 0) {
           if (!item.name.equals(AGED_BRIE)) {
             if (!item.name.equals(BACKSTAGE_PASS)) {
               if (item.quality > 0) {
-                if (!item.name.equals(SULFURAS)) {
-                  item.quality--;
-                }
+                item.quality--;
               }
             } else {
               item.quality = 0;
