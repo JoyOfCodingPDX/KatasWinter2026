@@ -13,31 +13,28 @@ class GildedRose {
         if (item instanceof Sulfuras) {
           continue;
 
-        } else if (item instanceof AgedBrie) {
-          AgedBrie agedBrie = (AgedBrie) item;
+        } else if (item instanceof AgedBrie agedBrie) {
           agedBrie.updateQuality();
           continue;
         }
 
-        switch (item.name) {
-          case BACKSTAGE_PASS -> {
-            if (item.sellIn <= 0) {
-              item.quality = 0;
+        if (item.name.equals(BACKSTAGE_PASS)) {
+          if (item.sellIn <= 0) {
+            item.quality = 0;
 
-            } else if (item.quality < 50) {
-              int qualityImprovement;
-              if (item.sellIn <= 5) {
-                qualityImprovement = 3;
-              } else if (item.sellIn <= 10) {
-                qualityImprovement = 2;
-              } else {
-                qualityImprovement = 1;
-              }
-              item.quality = Math.min(item.quality + qualityImprovement, 50);
+          } else if (item.quality < 50) {
+            int qualityImprovement;
+            if (item.sellIn <= 5) {
+              qualityImprovement = 3;
+            } else if (item.sellIn <= 10) {
+              qualityImprovement = 2;
+            } else {
+              qualityImprovement = 1;
             }
-            item.sellIn--;
-            continue;
+            item.quality = Math.min(item.quality + qualityImprovement, 50);
           }
+          item.sellIn--;
+          continue;
         }
 
         if (item.quality > 0) {
