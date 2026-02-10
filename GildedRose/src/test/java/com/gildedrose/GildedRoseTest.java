@@ -48,6 +48,27 @@ class GildedRoseTest {
         assertThat(agedBrie.quality, equalTo(50));
     }
 
+    @Test
+    void afterSellByDateQualityOfAgedBrieIncreasesByTwo() {
+        Item agedBrie = new Item(GildedRose.AGED_BRIE, 0, 0);
+        Item[] items = new Item[]{agedBrie};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(agedBrie.sellIn, equalTo(-1));
+        assertThat(agedBrie.quality, equalTo(2));
+    }
+
+
+    @Test
+    void afterSellByDateQualityOfAgedBrieIncreasesByTwoUntilItReaches50() {
+        Item agedBrie = new Item(GildedRose.AGED_BRIE, 0, 49);
+        Item[] items = new Item[]{agedBrie};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(agedBrie.sellIn, equalTo(-1));
+        assertThat(agedBrie.quality, equalTo(50));
+    }
+
     @Disabled("Conjured items are not yet implemented")
     @Test
     void conjuredItemDecreasesInQualityByTwoWhenUpdateQualityIsCalled() {
