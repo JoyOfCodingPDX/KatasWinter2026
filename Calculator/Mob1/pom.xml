@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob.RPNCalculator</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob1.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>

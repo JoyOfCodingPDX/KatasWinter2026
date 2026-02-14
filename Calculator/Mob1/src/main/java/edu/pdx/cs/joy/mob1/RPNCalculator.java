@@ -1,4 +1,4 @@
-package edu.pdx.cs.joy.mob;
+package edu.pdx.cs.joy.mob1;
 
 import com.google.common.annotations.VisibleForTesting;
 
