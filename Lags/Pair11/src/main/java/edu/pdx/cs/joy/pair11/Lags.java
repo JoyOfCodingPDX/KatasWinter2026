@@ -17,10 +17,10 @@ public class Lags {
   public String maxEff(){
     List<String> flight1  = this.flights.getFirst();
     for(int i = 0; i < this.flights.size(); ++i){
-      if (valueOf(flight1.get(3)) <= this.flights.get(i + 1)) {
-
-
-      }
+//      if (valueOf(flight1.get(3)) <= this.flights.get(i + 1)) {
+//
+//
+//      }
     }
     return this.flights.getFirst().get(0);
   }

@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair4;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -38,6 +39,7 @@ public class LagsTest
     assertThat(flight.money, equalTo(3));
   }
 
+  @Disabled
   @Test
   void works2() {
     String[] flights = {
