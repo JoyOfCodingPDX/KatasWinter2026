@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.mob.Tennis</mainClass>
+              <mainClass>edu.pdx.cs.joy.mob.RPNCalculator</mainClass>
             </manifest>
           </archive>
         </configuration>

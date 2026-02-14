@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
 
-class TennisIT extends InvokeMainTestCase {
+class RPNCalculatorIT extends InvokeMainTestCase {
 
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Tennis.class);
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class);
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
