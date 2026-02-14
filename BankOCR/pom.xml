@@ -12,5 +12,8 @@
   <description>The Bank OCR Katas</description>
   <modules>
     <module>Mob1</module>
+    <module>Mob2</module>
+    <module>Mob3</module>
+    <module>Mob4</module>
   </modules>
 </project>
