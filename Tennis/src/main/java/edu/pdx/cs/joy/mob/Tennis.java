@@ -12,10 +12,12 @@ public class Tennis {
   private final String name1;
   private final String name2;
   private String score;
+  private int player1Score;
 
   public Tennis(String name1, String name2) {
     this.name1 = name1;
     this.name2 = name2;
+    this.player1Score = 0;
   }
 
   public String getPlayerOne() {
@@ -32,7 +34,7 @@ public class Tennis {
   }
 
   public void playerOneScores() {
-
+    this.player1Score++;
   }
 
   @VisibleForTesting
@@ -40,4 +42,7 @@ public class Tennis {
     System.err.println("Missing command line arguments");
   }
 
+  public int getPlayer1Score() {
+    return this.player1Score;
+  }
 }
