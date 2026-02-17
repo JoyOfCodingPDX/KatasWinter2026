@@ -11,6 +11,7 @@ import com.google.common.annotations.VisibleForTesting;
 public class Tennis {
   private final String name1;
   private final String name2;
+  private String score;
 
   public Tennis(String name1, String name2) {
     this.name1 = name1;
@@ -25,8 +26,15 @@ public class Tennis {
     return name2;
   }
 
+  public String getScore() {
+    score = "Love-Love";
+    return score;
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+
 }
