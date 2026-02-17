@@ -23,4 +23,13 @@ public class TennisTest
     String score = tennis.getScore();
     assertThat(score, equalTo("Love-Love"));
   }
+
+  @Test
+  void playerOneScoresPointUpdatesScore() {
+    Tennis tennis = new Tennis("Name1", "Name2");
+    tennis.playerOneScores();
+    String score = tennis.getScore();
+    assertThat(score, equalTo("15-Love"));
+  }
+
 }
