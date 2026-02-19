@@ -7,6 +7,7 @@ import com.google.common.annotations.VisibleForTesting;
  * <p>
  * Use IntelliJ's "Refactor | Rename..." command to change the name of this
  * class (and its tests).
+ * Worked on by: Adan Hernandez, Ed Norris, Kaitlyn Harvey, Shanice Uwase
  */
 public class RPNCalculator {
 
