@@ -27,4 +27,8 @@ public class RPNCalculator {
 
     throw new IllegalArgumentException();
   }
+  public boolean canTellIfOp() {
+    return false;
+  }
 }
+
