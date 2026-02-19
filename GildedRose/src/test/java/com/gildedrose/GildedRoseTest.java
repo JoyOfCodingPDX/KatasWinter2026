@@ -30,7 +30,7 @@ class GildedRoseTest {
 
     @Test
     void agedBrieIncreasesInQualityTheOlderItGets() {
-        Item agedBrie = new Item("Aged Brie", 2, 0);
+        Item agedBrie = new AgedBrie(2, 0);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -40,11 +40,32 @@ class GildedRoseTest {
 
     @Test
     void agedBrieAtMaxQualityDoesNotIncreaseInQuality() {
-        Item agedBrie = new Item("Aged Brie", 2, 50);
+        Item agedBrie = new AgedBrie(2, 50);
         Item[] items = new Item[]{agedBrie};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertThat(agedBrie.sellIn, equalTo(1));
+        assertThat(agedBrie.quality, equalTo(50));
+    }
+
+    @Test
+    void afterSellByDateQualityOfAgedBrieIncreasesByTwo() {
+        Item agedBrie = new AgedBrie(0, 0);
+        Item[] items = new Item[]{agedBrie};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(agedBrie.sellIn, equalTo(-1));
+        assertThat(agedBrie.quality, equalTo(2));
+    }
+
+
+    @Test
+    void afterSellByDateQualityOfAgedBrieIncreasesByTwoUntilItReaches50() {
+        Item agedBrie = new AgedBrie(0, 49);
+        Item[] items = new Item[]{agedBrie};
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(agedBrie.sellIn, equalTo(-1));
         assertThat(agedBrie.quality, equalTo(50));
     }
 
@@ -61,7 +82,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassDropsToZeroQualityAfterConcert() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 57);
+        Item backstagePass = new BackstagePass(0, 57);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -92,7 +113,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassIncreasesBy1PerDayWhenMoreThan10DaysAway() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 17, 20);
+        Item backstagePass = new BackstagePass(17, 20);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         for (int i = 0; i < 7; i++) {
@@ -104,7 +125,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassIncreasesBy2PerDayWhen10DaysOrLess() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20);
+        Item backstagePass = new BackstagePass(10, 20);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         for (int i = 0; i < 5; i++) {
@@ -116,7 +137,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassStaysAt0QualityWhenAlreadyExpired() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", -1, 0);
+        Item backstagePass = new BackstagePass(-1, 0);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -126,7 +147,7 @@ class GildedRoseTest {
 
     @Test
     void sulfurasNeverChangesInQualityOrSellIn() {
-        Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
+        Item sulfuras = new Sulfuras(0, 80);
         Item[] items = new Item[]{sulfuras};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -136,7 +157,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassIncreasesBy3PerDayWhen5DaysOrLess() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20);
+        Item backstagePass = new BackstagePass(5, 20);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         for (int i = 0; i < 5; i++) {
@@ -148,7 +169,7 @@ class GildedRoseTest {
 
     @Test
     void backstagePassAt0SellInDropsToZeroQualityAfterConcert() {
-        Item backstagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20);
+        Item backstagePass = new BackstagePass(0, 20);
         Item[] items = new Item[]{backstagePass};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -158,7 +179,7 @@ class GildedRoseTest {
 
     @Test
     void sulfurasWithQuality10NeverChanges() {
-        Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 0, 10);
+        Item sulfuras = new Sulfuras(0, 10);
         Item[] items = new Item[]{sulfuras};
         GildedRose app = new GildedRose(items);
         app.updateQuality();

@@ -24,6 +24,8 @@ accordingly
     <module>Diamond</module>
     <module>GildedRose</module>
     <module>Lags</module>
+    <module>Tennis</module>
+    <module>Calculator</module>
   </modules>
   <inceptionYear>2026</inceptionYear>
   <organization>

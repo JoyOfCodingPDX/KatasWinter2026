@@ -11,16 +11,23 @@ public class Lags {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
-      String line;
+    String line = "";
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      return;
+    }
+
+      try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
+      line = br.readLine();
+      if  (line == null) {
+        System.err.println("Empty file provided");
+      }
       while ((line = br.readLine()) != null){
-        if (line.isEmpty()) {
-          return;
-        }
+        //empty
       }
     } catch (IOException e) {
+      System.err.println(e.getMessage());
       throw new RuntimeException(e);
     }
-    System.err.println("Missing command line arguments");
   }
 }

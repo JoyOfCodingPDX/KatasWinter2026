@@ -22,16 +22,23 @@ public class Lags {
   }
 
   public Boolean hasConflict(Lags other) {
-    if((this.start + this.duration) > (other.start)) {
-      return true;
-    }
-    return false;
+      return (this.start + this.duration) > (other.start);
   }
 
   public static ArrayList<ArrayList<Lags>> createFlightCombination(ArrayList<Lags> myList) {
     ArrayList<ArrayList<Lags>> flightCombinationList = new ArrayList<ArrayList<Lags>>();
     for(int i = 0; i < myList.size(); i++) {
+      for(int j = i + 1; j < myList.size(); j++) {
+        if(!myList.get(i).hasConflict(myList.get(j))) {
+          ArrayList<Lags> combo = new ArrayList<Lags>();
+          combo.add(myList.get(i));
+          combo.add(myList.get(j));
+          flightCombinationList.add(combo);
+        }
+      }
     }
     return flightCombinationList;
   }
+
+
 }

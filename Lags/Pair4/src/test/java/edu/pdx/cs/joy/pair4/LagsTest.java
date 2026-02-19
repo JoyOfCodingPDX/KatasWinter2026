@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.pair4;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,7 +23,8 @@ public class LagsTest
             "BA01 6 9 8"
     };
 
-    int result = Lags.bestRoute(flights);
+    Lags obj = new Lags();
+    int result = obj.bestRoute(flights);
     assertThat(result, equalTo(18));
   }
 
@@ -37,4 +39,18 @@ public class LagsTest
     assertThat(flight.money, equalTo(3));
   }
 
+  @Disabled
+  @Test
+  void works2() {
+    String[] flights = {
+            "AF514 0 5 10",
+            "CO5 3 7 14",
+            "AF515 5 9 20",
+            "BA01 6 9 8"
+    };
+
+    Lags obj = new Lags();
+    int result = obj.bestRoute(flights);
+    assertThat(result, equalTo(30));
+  }
 }

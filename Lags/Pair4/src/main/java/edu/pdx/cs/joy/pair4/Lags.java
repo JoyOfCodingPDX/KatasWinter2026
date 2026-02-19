@@ -2,11 +2,11 @@ package edu.pdx.cs.joy.pair4;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Lags {
+
+  Map<planes, Boolean> visited;
 
   ArrayList<planes> flights;
   static class planes{
@@ -35,6 +35,17 @@ public class Lags {
     for (String flight : flightsloop) {
       flights.add(new planes(flight));
     }
+
+    int max_money = 0;
+    for (int i = 0; i < flightsloop.length; ++i) {
+      for (planes innerflight : flights) {
+        if (flights.get(i) == innerflight) {
+          continue;
+        }
+      }
+    }
+
+
     return 18;
   }
 

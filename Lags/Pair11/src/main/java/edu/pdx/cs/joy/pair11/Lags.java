@@ -8,15 +8,19 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import static java.lang.String.valueOf;
 
 
 public class Lags {
 
   public List<List<String>> flights;
   public String maxEff(){
-    String result = this.flights.getFirst().getFirst();
+    List<String> flight1  = this.flights.getFirst();
     for(int i = 0; i < this.flights.size(); ++i){
-      //FILL IN
+//      if (valueOf(flight1.get(3)) <= this.flights.get(i + 1)) {
+//
+//
+//      }
     }
     return this.flights.getFirst().get(0);
   }
