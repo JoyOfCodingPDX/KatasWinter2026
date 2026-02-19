@@ -10,7 +10,7 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class RPNCalculator {
 
-  //private static final Set<String> VALID_OPTIONS = "";
+  //private static final Set<String> VALID_OPTIONS = Set.of('+', '-', '/', '*', '^', '%');
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
