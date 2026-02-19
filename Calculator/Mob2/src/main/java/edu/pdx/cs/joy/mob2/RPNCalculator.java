@@ -22,7 +22,10 @@ public class RPNCalculator {
    * @return result
    */
   public double calculate(String s) {
-    //String input[] = s.split(" ");
-    return 4.0;
+    String input[] = s.split(" ");
+    int num1 = Integer.parseInt(input[0]);
+    int num2 = Integer.parseInt(input[1]);
+
+    return num1 + num2;
   }
 }

@@ -20,5 +20,10 @@ public class RPNCalculatorTest
     double result = newCalc.calculate("2 2 +");
     assertThat(result, equalTo(4.0));
   }
+
+  @Test
+  void canCalculateWithOperator() {
+    
+  }
 }
 
