@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RPNCalculatorTest
 {
@@ -18,10 +19,13 @@ public class RPNCalculatorTest
   @Test
   void oneOperator() {
     List<Character> expressionElements = new ArrayList<>();
-
     expressionElements.add('+');
 
-    assertThrows(IllegalArgumentException.class, () -> {RPNCalculator.evaluateExpression(expressionElements)});
+    assertThrows(IllegalArgumentException.class, () -> {RPNCalculator.evaluateExpression(expressionElements);});
   }
+
+
+
+
 }
 
