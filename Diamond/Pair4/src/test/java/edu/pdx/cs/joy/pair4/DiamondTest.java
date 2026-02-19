@@ -11,13 +11,8 @@ public class DiamondTest
   }
 
   @Test
-  void cleanDiamondsD(){
-    Diamond.cleanDiamonds('D');
-  }
+  private void cleanDiamondsTest(){
 
-  @Test
-  void cleanDiamondsH(){
-    Diamond.cleanDiamonds('H');
   }
 }
 

@@ -18,32 +18,31 @@ public class Diamond {
     } else {
       char letter = args[0].charAt(0);
       int currentLetter = 0;
-      int innerSpaces = 1;
 
       for (int i = letter - 'A'; i >= 0; i--) {
         printSpaces(i);
         System.out.print(ALPHABET.charAt(currentLetter));
         if (currentLetter != 0) {
-          printSpaces(innerSpaces);
-          innerSpaces+=2;
+          printSpaces(i);
           System.out.print(ALPHABET.charAt(currentLetter));
         }
         System.out.println();
         currentLetter++;
       }
-      currentLetter -=2;
-      innerSpaces -=4;
-      for (int i = 1; i <= letter - 'A'; i++) {
-        printSpaces(i);
-        System.out.print(ALPHABET.charAt(currentLetter));
-        if (currentLetter != 0) {
-          printSpaces(innerSpaces);
-          innerSpaces-=2;
-          System.out.print(ALPHABET.charAt(currentLetter));
-        }
-        System.out.println();
-        currentLetter--;
-      }
     }
+//    System.out.println('C' - 'A');
+//    System.out.println('C' - 3);
+
+    /*
+    [spaces]A
+    [spaces][Letter][spaces][Letter]
+
+
+    2A
+    1B
+    0C
+    1B
+    2A
+     */
   }
 }

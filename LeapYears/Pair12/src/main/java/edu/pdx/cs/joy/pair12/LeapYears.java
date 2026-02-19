@@ -12,11 +12,6 @@ public class LeapYears {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    if (args.length == 0) {
-      System.err.println("Missing command line arguments");
-      return;
-    }
-
     List<String> argnew = Arrays.stream(args).toList();
 
     for (String s : argnew){
@@ -26,6 +21,8 @@ public class LeapYears {
         System.out.println("no leap");
       }
     }
+
+    System.err.println("Missing command line arguments");
   }
 
   public static boolean isLeapYear(int number) {
