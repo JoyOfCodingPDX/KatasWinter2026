@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LagsTest
 {
-
   @Test
   void takeOrSkipOneFlight() {
     Lags flight1 = new Lags("AF514", 0, 5, 10);

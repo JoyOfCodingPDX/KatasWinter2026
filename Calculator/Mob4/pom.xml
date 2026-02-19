@@ -15,6 +15,21 @@
   <description>Calculator Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
+  <developers>
+    <developer>
+      <name>Aaron Stave</name>
+    </developer>
+    <developer>
+      <name>Jon Schmidt</name>
+    </developer>
+    <developer>
+      <name>Felipe Sanchez</name>
+    </developer>
+    <developer>
+      <name>Molly Diaz</name>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
