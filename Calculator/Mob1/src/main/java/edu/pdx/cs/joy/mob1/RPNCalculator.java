@@ -10,8 +10,17 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class RPNCalculator {
 
+  // comment here
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+  }
+
+  public int addUp(int x, int y) {
+    return x + y;
+  }
+
+  public int subtract(int x, int y) {
+    return x - y;
   }
 }

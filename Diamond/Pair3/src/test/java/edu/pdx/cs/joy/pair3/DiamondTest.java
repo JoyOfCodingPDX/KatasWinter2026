@@ -1,6 +1,5 @@
 package edu.pdx.cs.joy.pair3;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,13 +19,13 @@ public class DiamondTest
   @Test
   void characterAGivesArrayLengthOne () {
     Diamond diamond = new Diamond();
-    assertEquals(1, diamond.buildRow('A').size());
+    assertEquals(1, diamond.getArrayFromChar('A').size());
   }
 
   @Test
   void characterBGivesArrayLengthThree() {
     Diamond diamond = new Diamond();
-    assertEquals(3, diamond.buildRow('B').size());
+    assertEquals(3, diamond.getArrayFromChar('B').size());
   }
 
   @Test
@@ -37,20 +36,10 @@ public class DiamondTest
   }
 
   @Test
-  void canGetDiamondStringSimple() {
+  void canGetDiamondString() {
     Diamond diamond = new Diamond();
     String result = diamond.diamondString('A');
     assertThat(result, containsString("A"));
-  }
-
-  @Disabled
-  @Test
-  void canGetDiamondStringC() {
-    Diamond diamond = new Diamond();
-    String result = diamond.diamondString('A');
-    assertThat(result, containsString("A"));
-    assertThat(result, containsString("B B"));
-    assertThat(result, containsString("C   C"));
   }
 }
 

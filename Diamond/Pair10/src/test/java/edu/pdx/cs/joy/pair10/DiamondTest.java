@@ -13,6 +13,10 @@ public class DiamondTest
     new Diamond();
   }
 
+  @Test
+  void checkUserInputIsValid(String letter) {
+    assertThat(letter.length(), is(2));
+  }
 }
 
 
