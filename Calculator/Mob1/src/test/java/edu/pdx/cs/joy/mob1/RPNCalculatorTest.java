@@ -10,4 +10,10 @@ public class RPNCalculatorTest
     new RPNCalculator();
   }
 
+  @Test
+  void canAdd(){
+    int num1 = 20;
+    int num2 = 5;
+    assertEquals(add(20,5), 25);
+  }
 }
