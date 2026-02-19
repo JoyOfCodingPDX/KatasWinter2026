@@ -11,22 +11,13 @@ public class Diamond {
     input = Arg.toUpperCase();
 
   }
-
-
-
-  
   @Override
   public String toString() {
     // TODO Implement diamond tool
     // Top half of diamond (recursive)
 
-
     // Bottom half of diamond
     for(char alphabet = input.charAt(0); alphabet >= 'A'; alphabet-- ){
-
-    }
-
-    for(char alphabet = 'A'; alphabet<= input.charAt(0); alphabet++){
 
     }
     return input;
@@ -42,7 +33,6 @@ public class Diamond {
       System.err.println("Missing command line arguments");
       return;
     }
-
     else if (1 < args.length) {
       System.err.println("Too many command line arguments");
       return;
