@@ -14,6 +14,16 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Test
+  void echoesOutArgsFromMain() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "1", "3", "+");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("13+"));
+  }
 
+  @Test
+  void onePlusThreeIsFour() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "1", "3", "+");
+    assertThat(result.getTextWrittenToStandardOut(), containsString("4"));
+  }
 }
 
