@@ -14,6 +14,15 @@ public class RPNCalculatorTest
   void canAdd(){
     int num1 = 20;
     int num2 = 5;
-    assertEquals(add(20,5), 25);
+    assertEquals(calc.addUp(20,5), 25);
+  }
+
+  @Test
+  void canSubtract() {
+    // Comment here
+    RPNCalculator calc = new RPNCalculator();
+    int num1 = 20;
+    int num2 = 5;
+    assertEquals(calc.subtract(num1, num2), 15);
   }
 }
