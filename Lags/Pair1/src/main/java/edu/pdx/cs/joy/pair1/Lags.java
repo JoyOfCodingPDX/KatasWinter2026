@@ -37,6 +37,6 @@ public class Lags {
         }
       }
       dp[i] = Math.max(skip, take);
-  }
+    }
     return dp[j - 1];
-}
+  }
