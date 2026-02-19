@@ -6,12 +6,9 @@ public class Diamond {
 
   public String printDiamond(char letter){
     char start = 'A';
-    int distance = ((int) letter - (int) start) + 1;
+    int distance = (int) letter - (int) start;
     int lines = (distance * 2) - 1;
-    for(int i = 0; i < distance; i++){
-      System.out.println(letter);
-    }
-    return "";
+    return lines;
   }
 
   public int asciiValue(char letter){

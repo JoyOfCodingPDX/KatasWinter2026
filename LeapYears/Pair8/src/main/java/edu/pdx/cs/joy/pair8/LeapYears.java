@@ -17,4 +17,11 @@ public class LeapYears {
     }
     return "Not Leap Year";
   }
+
+  public static String leapYears( int year ){
+    if (year % 400 == 0) {
+      return "Leap Year";
+    }
+    return "Not Leap Year";
+  }
 }
