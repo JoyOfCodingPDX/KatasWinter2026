@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob4;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import java.util.Objects;
+
 /**
  * A class for getting started with a code kata
  *
@@ -14,11 +16,19 @@ public class RPNCalculator {
   public static void main(String[] args) {
 //    System.err.println("Missing command line arguments");
 
+    int a,b,c,i = 0;
     // Create new string[] and copy args into it then echo it out
     String[] newArgs = new String[args.length];
-    for (int i = 0; i < args.length; i++) {
+    for (i = 0; i < args.length; i++) {
       newArgs[i] = args[i];
-      System.out.print(newArgs[i]);
+      //System.out.print(newArgs[i]);
+    }
+    i = 0;
+    while(i < newArgs.length){
+      if (Objects.equals(newArgs[i], "+")){
+        a = i;
+        while (Integer.)
+      }
     }
   }
 }
