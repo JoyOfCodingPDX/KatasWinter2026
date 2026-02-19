@@ -33,5 +33,17 @@ public class RPNCalculatorTest
     assertThat(result3, equalTo(56.0));
 
   }
+
+  @Test
+  void testIsValidOperator() {
+    RPNCalculator newCalc = new RPNCalculator();
+    assertThat(newCalc.isValidOperator("z"), equalTo(false));
+    assertThat(newCalc.isValidOperator("+"), equalTo(true));
+    assertThat(newCalc.isValidOperator("-"), equalTo(true));
+    assertThat(newCalc.isValidOperator("/"), equalTo(true));
+    assertThat(newCalc.isValidOperator("*"), equalTo(true));
+
+
+  }
 }
 
