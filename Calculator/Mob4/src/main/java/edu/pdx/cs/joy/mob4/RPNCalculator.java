@@ -24,11 +24,11 @@ public class RPNCalculator {
       //System.out.print(newArgs[i]);
     }
     i = 0;
-    while(i < newArgs.length){
-      if (Objects.equals(newArgs[i], "+")){
-        a = i;
-        while (Integer.)
-      }
-    }
+//    while(i < newArgs.length){
+//      if (Objects.equals(newArgs[i], "+")){
+//        a = i;
+////        while (Integer.)
+//      }
+//    }
   }
 }

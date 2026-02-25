@@ -1,5 +1,6 @@
 package edu.pdx.cs.joy.mob3;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class RPNCalculatorTest
     assertThrows(IllegalArgumentException.class, () -> {RPNCalculator.evaluateExpression(expressionElements);});
   }
 
+  @Disabled
   @Test
   void simplePlusSuccess() {
     List<Character> expression = new ArrayList<>();

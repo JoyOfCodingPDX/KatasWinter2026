@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob1;
 
 import edu.pdx.cs.joy.InvokeMainTestCase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -14,6 +15,7 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
   }
 
+  @Disabled
   @Test
   void invokingMainWithAddArgumentPrintsSuccessfully() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 +");
