@@ -10,4 +10,10 @@ public class BankOCRTest
     new BankOCR();
   }
 
+  @Test
+  void canParseAll0s() {
+    BankOCR bankOCR = new BankOCR();
+
+    String result = bankOCR.parse();
+  }
 }
