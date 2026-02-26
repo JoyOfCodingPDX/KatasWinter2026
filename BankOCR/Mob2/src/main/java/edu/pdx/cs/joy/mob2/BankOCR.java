@@ -15,3 +15,39 @@ public class BankOCR {
     System.err.println("Missing command line arguments");
   }
 }
+
+one = “   “ +
+        “  |” +
+        “  |”;
+
+two = “ _ “ +
+        “ _|” +
+        “|_ “;
+
+thr = “ _ “ +
+        “ _|” +
+        “ _|“;
+
+fou = “   “ +
+        “|_|” +
+        “  |“;
+
+fiv = “ _ “ +
+        “|_ ” +
+        “ _|“;
+
+six = “ _ “ +
+        “|_ ” +
+        “|_|“;
+
+sev = “ _ “ +
+        “  |” +
+        “  |“;
+
+eig = “ _ “ +
+        “|_|” +
+        “|_|“;
+
+nin = “ _ “ +
+        “|_|” +
+        “ _|“;
