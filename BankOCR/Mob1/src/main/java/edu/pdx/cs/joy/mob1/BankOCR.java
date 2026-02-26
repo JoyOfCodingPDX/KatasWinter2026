@@ -12,7 +12,14 @@ public class BankOCR {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if(args.length == 1){
+      System.out.println(args[0]);
+
+    }else{
+      System.err.println("Invalid command line arguments");
+    }
+
+    //System.err.println("Missing command line arguments");
   }
 
 
