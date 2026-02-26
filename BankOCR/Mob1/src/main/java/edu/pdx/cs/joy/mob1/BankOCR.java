@@ -14,7 +14,7 @@ import java.io.Reader;
 public class BankOCR {
 
 
-  private static final Reader reader;
+  private final Reader reader;
 
   public BankOCR(Reader reader){
     this.reader = reader;
