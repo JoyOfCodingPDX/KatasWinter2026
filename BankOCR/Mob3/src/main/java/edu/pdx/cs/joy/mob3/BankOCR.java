@@ -14,4 +14,7 @@ public class BankOCR {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+  public static String parse(String str1, String str2, String str3){
+
+  }
 }

@@ -14,6 +14,12 @@ public class BankOCRTest
   void canParseAll0s() {
     BankOCR bankOCR = new BankOCR();
 
-    String result = bankOCR.parse();
+    String result = bankOCR.parse(" _  _  _  _  _  _  _  _  _ ",
+                                  "| || || || || || || || || |",
+                                  "|_||_||_||_||_||_||_||_||_|");
+
+
+
+
   }
 }
