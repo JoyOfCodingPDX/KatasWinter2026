@@ -18,7 +18,26 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  <developers>
+    <developer>
+      <name>Kaitlyn Harvey</name>
+    </developer>
+    <developer>
+      <name>Molly Diaz</name>
+    </developer>
+    <developer>
+      <name>Tuan Vu</name>
+    </developer>
+    <developer>
+      <name>Alex Novitchkov-Burbank</name>
+    </developer>
+    <developer>
+      <name>Jon Schmidt</name>
+    </developer>
+    <developer>
+      <name> Abhi Patel</name>
+    </developer>
+  </developers>
   <build>
     <plugins>
       <plugin>
