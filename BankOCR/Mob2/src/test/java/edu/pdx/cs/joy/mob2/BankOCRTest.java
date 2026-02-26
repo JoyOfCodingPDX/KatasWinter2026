@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class BankOCRTest
 {
 
@@ -21,6 +24,11 @@ public class BankOCRTest
 
   @Test
   void canParseOneNumber() {
+    BankOCR bankOCR = new BankOCR();
+
+    int parsedOne = bankOCR.parse(BankOCR.one);
+
+    assertThat(parsedOne, equalTo(1));
   }
 
 }
