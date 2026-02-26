@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -47,9 +48,17 @@ public class BankOCRTest
     assertThat(parsedNine, equalTo(9));
   }
 
-//  @Test
-//  void canParseNumberTwo() {
-//    BankOCR bankOCR = new
-//  }
+  @Test
+  void canParseTheFirstNumber() {
+    String digits = """
+                        _  _     _  _  _  _  _
+                      | _| _||_||_ |_   ||_||_|
+                      ||_  _|  | _||_|  ||_| _|
+                    
+                    """;
+    System.out.println(digits);
+    List<Integer> result = new BankOCR().parseAccount(digits);
+    assertThat(result.getFirst(), equalTo(1));
+  }
 
 }
