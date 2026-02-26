@@ -2,6 +2,8 @@ package edu.pdx.cs.joy.mob3;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class BankOCRTest
 {
 
@@ -18,8 +20,9 @@ public class BankOCRTest
                                   "| || || || || || || || || |",
                                   "|_||_||_||_||_||_||_||_||_|");
 
-
-
-
+    assertEquals("000000000", result);
   }
+
+
+
 }
