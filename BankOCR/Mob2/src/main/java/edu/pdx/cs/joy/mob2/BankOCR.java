@@ -10,79 +10,50 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class BankOCR {
 
-  String one = "   " +
+  public static String one = "   " +
           "  |" +
           "  |";
 
-  String two = " _ " +
+  public static String two = " _ " +
           " _|" +
           "|_ ";
 
-  String thr = " _ " +
+  public static String thr = " _ " +
           " _|" +
           " _|";
 
-  String fou = "   " +
+  public static String fou = "   " +
           "|_|" +
           "  |";
 
-  String fiv = " _ " +
+  public static String fiv = " _ " +
           "|_ " +
           " _|";
 
-  String six = " _ " +
+  public static String six = " _ " +
           "|_ " +
           "|_|";
 
-  String sev = " _ " +
+  public static String sev = " _ " +
           "  |" +
           "  |";
 
-  String eig = " _ " +
+  public static String eig = " _ " +
           "|_|" +
           "|_|";
 
-  String nin = " _ " +
+  public static String nin = " _ " +
           "|_|" +
           " _|";
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public int parse(String number) {
+    if (number.equals(one)) {
+      return 1;
+    }
+    return 0;
+  }
 }
-
-one = "   " +
-        "  |" +
-        "  |";
-
-two = " _ " +
-        " _|" +
-        "|_ ";
-
-thr = " _ " +
-        " _|" +
-        " _|";
-
-fou = "   " +
-        "|_|" +
-        "  |";
-
-fiv = " _ " +
-        "|_ " +
-        " _|";
-
-six = " _ " +
-        "|_ " +
-        "|_|";
-
-sev = " _ " +
-        "  |" +
-        "  |";
-
-eig = " _ " +
-        "|_|" +
-        "|_|";
-
-nin = " _ " +
-        "|_|" +
-        " _|";
