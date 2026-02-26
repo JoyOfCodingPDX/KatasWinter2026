@@ -23,7 +23,27 @@ public class RPNCalculatorTest
 
   @Test
   void canCalculateWithOperator() {
-    
+    RPNCalculator newCalc = new RPNCalculator();
+    double result1 = newCalc.calculate("3 2 -");
+    double result2 = newCalc.calculate("25 5 /");
+    double result3 = newCalc.calculate("7 8 *");
+
+    assertThat(result1, equalTo(1.0));
+    assertThat(result2, equalTo(5.0));
+    assertThat(result3, equalTo(56.0));
+
+  }
+
+  @Test
+  void testIsValidOperator() {
+    RPNCalculator newCalc = new RPNCalculator();
+    assertThat(newCalc.isValidOperator("z"), equalTo(false));
+    assertThat(newCalc.isValidOperator("+"), equalTo(true));
+    assertThat(newCalc.isValidOperator("-"), equalTo(true));
+    assertThat(newCalc.isValidOperator("/"), equalTo(true));
+    assertThat(newCalc.isValidOperator("*"), equalTo(true));
+
+
   }
 }
 
