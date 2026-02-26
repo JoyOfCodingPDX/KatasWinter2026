@@ -10,11 +10,17 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class BankOCR {
 
+  public String zero = " _ | ||_|";
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
+
+
   }
   public static String parse(String str1, String str2, String str3){
+    String result = str1 + str2 + str3;
 
+
+    return result;
   }
 }
