@@ -11,6 +11,7 @@ import com.google.common.annotations.VisibleForTesting;
 public class BankOCR {
 
   static String zero = " _ | ||_|";
+  static String one = "     |  |";
 
   @VisibleForTesting
   public static void main(String[] args) {
@@ -38,6 +39,8 @@ public class BankOCR {
 
       if (temp.equals(zero)) {
         toReturn += "0";
+      } else if (temp.equals(one)) {
+        toReturn += "1";
       }
     }
 

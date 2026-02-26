@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob3;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,16 @@ public class BankOCRTest
 
     assertEquals("000000000", result);
   }
+  @Test
+  void canParseAll1s() {
+    BankOCR bankOCR = new BankOCR();
 
+    String result = bankOCR.parse("                           ",
+            "  |  |  |  |  |  |  |  |  |",
+            "  |  |  |  |  |  |  |  |  |");
+
+    assertEquals("111111111", result);
+  }
 
 
 }
