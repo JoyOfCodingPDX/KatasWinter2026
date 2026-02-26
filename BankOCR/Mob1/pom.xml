@@ -19,6 +19,27 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>Aaron Stave</name>
+    </developer>
+    <developer>
+      <name>Felipe Sanchez</name>
+    </developer>
+    <developer>
+      <name>Kaevin</name>
+    </developer>
+    <developer>
+      <name>Dylan Mills</name>
+    </developer>
+    <developer>
+      <name>Jeremy Cuthbert</name>
+    </developer>
+    <developer>
+      <name>Ganaliel Rojas</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>

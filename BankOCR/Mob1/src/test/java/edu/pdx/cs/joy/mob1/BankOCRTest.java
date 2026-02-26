@@ -10,4 +10,8 @@ public class BankOCRTest
     new BankOCR();
   }
 
+  @Test
+  void canParseFirstLine() {
+
+  }
 }
