@@ -19,7 +19,7 @@ public class BankOCRTest
                                   "|_||_||_||_||_||_||_||_||_|");
 
 
-
+    result.
 
   }
 }
