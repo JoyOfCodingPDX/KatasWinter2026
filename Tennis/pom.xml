@@ -19,6 +19,27 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>David Whitlock</name>
+    </developer>
+    <developer>
+      <name>Jon Schmidt</name>
+    </developer>
+    <developer>
+      <name>Jay Abegglen</name>
+    </developer>
+    <developer>
+      <name>Yollaine Brooks</name>
+    </developer>
+    <developer>
+      <name>Tuan Vu</name>
+    </developer>
+    <developer>
+      <name>Ed Norris</name>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
