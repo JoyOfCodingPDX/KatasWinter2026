@@ -4,6 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 import java.io.BufferedReader;
 import java.io.Reader;
+import java.io.StringReader;
 
 /**
  * A class for getting started with a code kata
@@ -24,7 +25,7 @@ public class BankOCR {
   public static void main(String[] args) {
     if(args.length == 1){
       System.out.println(args[0]);
-      BufferedReader br = new BufferedReader(reader);
+      BufferedReader br = new BufferedReader(new StringReader(""));
       try {
         String line1 = br.readLine();
         String line2 = br.readLine();

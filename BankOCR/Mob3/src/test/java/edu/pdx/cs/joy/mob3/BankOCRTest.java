@@ -21,13 +21,7 @@ public class BankOCRTest
                                   "| || || || || || || || || |",
                                   "|_||_||_||_||_||_||_||_||_|");
 
-<<<<<<< HEAD
-
-    result.
-
-=======
     assertEquals("000000000", result);
->>>>>>> refs/remotes/origin/main
   }
   @Test
   void canParseAll1s() {
