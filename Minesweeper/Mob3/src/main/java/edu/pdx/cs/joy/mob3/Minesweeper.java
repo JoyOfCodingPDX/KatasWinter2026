@@ -35,8 +35,13 @@ public class Minesweeper {
 
   }
 
-  public Character[][] insertMine(Character grid [][]){
+  public Character[][] insertAndUpdateMine(int row, int column, Character[][] grid){
 
-    return Character[][] grid;
+    for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+        //parse line by line
+      }
+    }
+    return grid;
   }
 }
