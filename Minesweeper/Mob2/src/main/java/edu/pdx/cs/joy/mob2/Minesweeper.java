@@ -27,14 +27,14 @@ public class Minesweeper {
     StringBuilder sb = new StringBuilder();
 
     System.out.println("Number of args: " + args.length);
-
-    String[] field = args[2].split("\n");
+    String[][] giveitaname = new String[rows][cols];
+    //String[] field = args[2].split("\n");
     // For each row n
     for (int i = 0; i < rows; ++i) {
       // Create col m of dashes
       for (int j = 0; j < cols; ++j) {
-        if (field[i].charAt(j) == '*'){
-          sb.append("*");
+        if (giveitaname[i][j].equals("*")){
+          field[i - 1]
           continue;
         }
         sb.append(".");
