@@ -16,7 +16,10 @@ public class Minesweeper {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if (args.length < 3) {
+      System.err.println("Missing command line arguments");
+    }
+
   }
 
   public String[][] sweep(String[][] mineField){
@@ -24,9 +27,16 @@ public class Minesweeper {
     String[][] result = new String[numberOfRows][];
     for (int i = 0; i < numberOfRows; i++){
       for (int j = 0; j < mineField[i].length; j++){
-
+        if (mineField[i][j].equals("*")){
+          result[i][j] = "*";
+        }
+        else {
+          String transResult = transmit(mineField, i, j);
+          result[i][j] = transResult;
+        }
       }
     }
+    return result;
   }
 
   public String transmit(String[][] mineField, int row, int col){
@@ -34,10 +44,10 @@ public class Minesweeper {
     int numRows = mineField.length;
     int numCols = mineField[0].length;
     for (int i = -1; i <= 1; i++){
-      if (row + i >= numRows) continue;
+      if (row + i < 0 || row + i >= numRows) continue;
       for (int j = -1; j <= 1; j++){
-        if (col + j >= numCols) continue;;
-        if (mineField[row + i][col + j] == "*"){
+        if (col + j < 0 || col + j >= numCols) continue;;
+        if (mineField[row + i][col + j].equals("*")){
           ++countMines;
         }
       }
