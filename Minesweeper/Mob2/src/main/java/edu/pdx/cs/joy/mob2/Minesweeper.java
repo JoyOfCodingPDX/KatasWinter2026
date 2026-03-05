@@ -28,11 +28,16 @@ public class Minesweeper {
 
     System.out.println("Number of args: " + args.length);
 
+    String[] field = args[2].split("\n");
     // For each row n
     for (int i = 0; i < rows; ++i) {
       // Create col m of dashes
       for (int j = 0; j < cols; ++j) {
-        sb.append("-");
+        if (field[i].charAt(j) == '*'){
+          sb.append("*");
+          continue;
+        }
+        sb.append(".");
       }
       sb.append('\n');
     }

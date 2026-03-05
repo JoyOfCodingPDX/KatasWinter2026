@@ -27,11 +27,13 @@ class MinesweeperIT extends InvokeMainTestCase {
 
   @Test
   void echoInput() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class, "3 5\n" +
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class, "3", "5",
             "..*..\n" +
             "*....\n" +
             ".....");
-    assertThat(result.getTextWrittenToStandardOut(), containsString("What"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("..*..\n" +
+            "*....\n" +
+            "....."));
   }
 
 }
