@@ -14,4 +14,8 @@ public class Minesweeper {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public Character[][] createGrid(int row, int column) {
+    Character[][] grid = new Character[row][column];
+  }
 }
