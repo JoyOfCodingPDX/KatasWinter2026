@@ -34,4 +34,9 @@ public class Minesweeper {
 
 
   }
+
+  public Character[][] insertMine(Character grid [][]){
+
+    return Character[][] grid;
+  }
 }
