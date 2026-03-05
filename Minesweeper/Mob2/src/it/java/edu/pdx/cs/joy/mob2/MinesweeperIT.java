@@ -27,7 +27,7 @@ class MinesweeperIT extends InvokeMainTestCase {
 
   @Test
   void echoInput() {
-    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class, "3 5\n" +
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Minesweeper.class, "3", "5",
             "..*..\n" +
             "*....\n" +
             ".....");
