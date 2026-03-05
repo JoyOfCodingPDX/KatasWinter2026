@@ -28,7 +28,21 @@ public class Minesweeper {
     }
 
     // now 2D array is -9999 for mines and 0 for normal
-
+    /*
+    [-9999, 0, 0],
+    [0, 0, -9999],
+    [0, 0, 0]
+     */
+    for(int i = 0; i < rows; i++) {
+      for(int j = 0; j < col; j++) {
+        if(mineFieldMap[i][j] == -9999) {
+          // increment everything around us with boundary stuff
+        } else {
+          // we don't care about non mines
+          continue;
+        }
+      }
+    }
   }
 
   @VisibleForTesting
