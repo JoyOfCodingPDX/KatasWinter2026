@@ -10,5 +10,13 @@ public class MinesweeperTest
     new Minesweeper();
   }
 
+  @Test
+  void create2x2Array() {
+    Minesweeper minesweeper = new Minesweeper();
+
+    Character[][] grid = minesweeper.createGrid(2, 2);
+
+  }
+
 }
 
