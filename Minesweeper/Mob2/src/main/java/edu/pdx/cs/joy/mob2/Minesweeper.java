@@ -33,8 +33,11 @@ public class Minesweeper {
     for (int i = 0; i < rows; ++i) {
       // Create col m of dashes
       for (int j = 0; j < cols; ++j) {
-        if (field[i].charAt(j)); // TODO
-        sb.append("-");
+        if (field[i].charAt(j) == '*'){
+          sb.append("*");
+          continue;
+        }
+        sb.append(".");
       }
       sb.append('\n');
     }

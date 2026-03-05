@@ -31,7 +31,9 @@ class MinesweeperIT extends InvokeMainTestCase {
             "..*..\n" +
             "*....\n" +
             ".....");
-    assertThat(result.getTextWrittenToStandardOut(), containsString("What"));
+    assertThat(result.getTextWrittenToStandardOut(), containsString("..*..\n" +
+            "*....\n" +
+            "....."));
   }
 
 }

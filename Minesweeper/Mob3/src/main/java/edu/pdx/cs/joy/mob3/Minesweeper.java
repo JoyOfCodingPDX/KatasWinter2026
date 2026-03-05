@@ -24,4 +24,14 @@ public class Minesweeper {
     }
     return grid;
   }
+
+  public Character[][] showHint(int row, int column, Character[][] grid){
+
+    Character[][] resultGrid = createGrid(row,column);
+
+    return resultGrid;
+
+
+
+  }
 }
