@@ -18,6 +18,26 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <developers>
+    <developer>
+      <name>Kaitlyn Harvey</name>
+    </developer>
+    <developer>
+      <name>Shanice Uwase</name>
+    </developer>
+    <developer>
+      <name>Ed Norris</name>
+    </developer>
+    <developer>
+      <name>Spencer Henwood</name>
+    </developer>
+    <developer>
+      <name>Jon Schmidt</name>
+    </developer>
+    <developer>
+      <name>Yollaine Brooks</name>
+    </developer>
+  </developers>
 
   <build>
     <plugins>
