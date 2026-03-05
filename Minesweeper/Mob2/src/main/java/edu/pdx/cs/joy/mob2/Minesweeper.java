@@ -10,6 +10,27 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Minesweeper {
 
+  public static void process(int rows, int col, String field) {
+    String[] rowsMap = field.split("\n");
+
+    int[][] mineFieldMap = new int[rows][col];
+    char currentChar;
+    for(int i = 0; i < rows; i++) {
+      for(int j = 0; j < col; j++) {
+        currentChar = rowsMap[i].charAt(j);
+        if(currentChar == '*') {
+          mineFieldMap[i][j] = -9999;
+        }
+        else {
+          mineFieldMap[i][j] = 0;
+        }
+      }
+    }
+
+    // now 2D array is -9999 for mines and 0 for normal
+
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
 //    System.err.println("Missing command line arguments")
@@ -34,7 +55,6 @@ public class Minesweeper {
       // Create col m of dashes
       for (int j = 0; j < cols; ++j) {
         if (giveitaname[i][j].equals("*")){
-          field[i - 1]
           continue;
         }
         sb.append(".");
