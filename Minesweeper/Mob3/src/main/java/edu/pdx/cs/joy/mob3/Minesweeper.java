@@ -17,5 +17,11 @@ public class Minesweeper {
 
   public Character[][] createGrid(int row, int column) {
     Character[][] grid = new Character[row][column];
+    for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+        grid[i][j] = '0';
+      }
+    }
+    return grid;
   }
 }
