@@ -30,9 +30,19 @@ public class Minesweeper {
   }
 
   public String transmit(String[][] mineField, int row, int col){
-    String topLeft;
-    String top;
-    String topRight;
+    int countMines = 0;
+    int numRows = mineField.length;
+    int numCols = mineField[0].length;
+    for (int i = -1; i <= 1; i++){
+      if (row + i >= numRows) continue;
+      for (int j = -1; j <= 1; j++){
+        if (col + j >= numCols) continue;;
+        if (mineField[row + i][col + j] == "*"){
+          ++countMines;
+        }
+      }
+    }
+    return String.valueOf(countMines);
   }
   /*
   *...
